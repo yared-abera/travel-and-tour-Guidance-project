@@ -14,7 +14,18 @@
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css\package.css">
-
+   
+   
+   <script>
+       $(document).ready(function(){
+           $(".scroll-top").click(function() {
+               $("html, body").animate({ 
+                  scrollTop: 0 
+             }, "slow");
+               return false;
+        });
+       });
+   </script>
 
 </head>
 <body>
@@ -123,7 +134,7 @@
             <a href="book.php" class="btn">book now</a>
          </div>
       </div>
-
+      
       <div class="box">
          <div class="image">
             <img src="images/jagol.jpg" alt="">
@@ -202,10 +213,14 @@
 <button type="button" class="scroll-top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
 
 </section>
+ 
+  <!-- swiper js link  
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>-->
 
-<!-- packages section ends -->
-
-
-
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<?php
+include "footer.php";
+?>
 </body>
 </html>
