@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    
+
 <section class="footer">
         <div class="box-container">
             <div class="box">
@@ -31,3 +42,5 @@
         </div>
         <div class="credit"> Developed by Travel Group</div>
     </section>
+    </body>
+</html>
