@@ -197,7 +197,7 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/Nechisar park.jpg" alt="">
+            <img src="images/Nechisar park.jpg" alt="nechisar">
          </div>
          <div class="content">
             <h3> Nechisar park Tour Packages</h3>

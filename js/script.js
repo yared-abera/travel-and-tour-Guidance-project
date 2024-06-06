@@ -10,39 +10,12 @@ window.onscroll = () => {
   menu.classList.remove('fa-times');
   navbar.classList.remove('active');
 };
-
-var swiper = new Swiper('.home-slider', {
-  loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-
-var swiper = new Swiper('.reviews-slider', {
-  grabCursor: true,
-  loop: true,
-  autoHeight: true,
-  spaceBetween: 20,
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    700: {
-      slidesPerView: 2,
-    },
-    1000: {
-      slidesPerView: 3,
-    },
-  },
-});
-
 const loadMoreBtn = document.querySelector('.packages .load-more .btn');
 let currentItem = 3;
 
 loadMoreBtn.onclick = () => {
   const boxes = [...document.querySelectorAll('.packages .box-container .box')];
-  for (let i = currentItem; i < currentItem + 3; i++) {
+  for (let i = currentItem; i < currentItem + 3; i + 1) {
     boxes[i].style.display = 'inline-block';
   }
   currentItem += 3;

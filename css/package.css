@@ -24,6 +24,15 @@
   text-transform: capitalize;
 }
 
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 5rem 10%;
+}
+
 /* header section style starts */
 .heading {
   background: url(images/package-bg.jpg) no-repeat;
