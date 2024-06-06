@@ -13,6 +13,7 @@
 </head>
 <body>
    <div class="heading" style="background:url(images/blo.png)  no-repeat">
+  
    
 </div>
    <section class="about">
@@ -50,7 +51,7 @@
 
       <div class="swiper-wrapper">
 
-         <div class="swiper-slide slide">
+         <div class="swiper-slide">
             <div class="stars">
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
@@ -64,7 +65,7 @@
             <img src="images/aziz ahmed.jfif" alt="">
          </div>
 
-         <div class="swiper-slide slide">
+         <div class="swiper-slide">
             <div class="stars">
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
@@ -77,7 +78,7 @@
             <img src="images/kebrom.jfif" alt="">
          </div>
 
-         <div class="swiper-slide slide">
+         <div class="swiper-slide">
             <div class="stars">
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
@@ -94,5 +95,6 @@
       </div>
 
    </div>
+</section>
 </body>
 </html>
