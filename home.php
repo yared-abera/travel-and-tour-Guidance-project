@@ -109,7 +109,7 @@
       </div>
       <div class="box">
          <div class="image">
-            <img src="images/img-2.jpg" alt="">
+            <img src="images/gorgora..jpg" alt="gorgora">
          </div>
          <div class="content">
             <h3>Delhi Tour Packages</h3>
@@ -120,7 +120,7 @@
       </div>
       <div class="box">
          <div class="image">
-            <img src="images/img-3.jpg" alt="">
+            <img src="images/images/Blue_Nile.png" alt="">
          </div>
          <div class="content">
             <h3>Japan Tour Packages</h3>
@@ -136,12 +136,12 @@
 <section class="home-offer home-packages">
    <div class="content">
       <div class="offerimage">
-      <img src="images/offer.jpg">
+      <img src="images/wonchi.jpg">
       </div>
    </div>
    <div class="content">
       <h3>upto 40% off</h3>
-      <p>Bali Dynasty Resort is centrally located within walking distance to the nightlife and excitement of the Kuta area. This popular Bali accommodation offers a wide range of room types to suit families and couples. The kids can enjoy the kids club while the adults spoil themselves at Ashoka Spa or the Beach Club. For a memorable and relaxing stay in Kuta why not stay at Bali Dynasty Resort.</p>
+      <p>wonchi Resort is centrally located within walking distance to the nightlife and excitement of the Kuta area. This popular Bali accommodation offers a wide range of room types to suit families and couples. The kids can enjoy the kids club while the adults spoil themselves at Ashoka Spa or the Beach Club. For a memorable and relaxing stay in Kuta why not stay at Bali Dynasty Resort.</p>
       <a href="book.php" class="btn">book now</a>
    </div>
 </section>
