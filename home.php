@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Travel Agency :: Best Agency</title>
+   <title>Travel Agency Best Agency</title>
    <!-- swiper css link  -->
    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
    <!-- font awesome cdn link  -->
@@ -93,8 +93,62 @@
 </section>
 <!-- home about section ends -->
 <!-- home pakcages -->
-<section class="home-package">
-<h1>packages</h1>
+<section class="home-packages">
+   <h1 class="heading-title"> our packages </h1>
+   <div class="box-container">
+      <div class="box">
+         <div class="image">
+            <img src="images/img-1.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>Dubai Tour Packages</h3>
+            <p>Enjoy the Emirates with unforgettable fun with our Dubai top selling packages!</p>
+            <h2>BDT 10,900</h2>
+            <a href="book.php" class="btn">book now</a>
+         </div>
+      </div>
+      <div class="box">
+         <div class="image">
+            <img src="images/img-2.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>Delhi Tour Packages</h3>
+            <p>Enjoy the Emirates with unforgettable fun with our Delhi top selling packages!</p>
+            <h2>BDT 9,900</h2>
+            <a href="book.php" class="btn">book now</a>
+         </div>
+      </div>
+      <div class="box">
+         <div class="image">
+            <img src="images/img-3.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>Japan Tour Packages</h3>
+            <p>Enjoy the Emirates with unforgettable fun with our Japan top selling packages!</p>
+            <h2>BDT 11,900</h2>
+            <a href="book.php" class="btn">book now</a>
+         </div>
+      </div>
+   </div>
+   <div class="load-more"> <a href="package.php" class="btn">load more</a> </div>
 </section>
+<!-- home offer section starts  -->
+<section class="home-offer home-packages">
+   <div class="content">
+      <div class="offerimage">
+      <img src="images/offer.jpg">
+      </div>
+   </div>
+   <div class="content">
+      <h3>upto 40% off</h3>
+      <p>Bali Dynasty Resort is centrally located within walking distance to the nightlife and excitement of the Kuta area. This popular Bali accommodation offers a wide range of room types to suit families and couples. The kids can enjoy the kids club while the adults spoil themselves at Ashoka Spa or the Beach Club. For a memorable and relaxing stay in Kuta why not stay at Bali Dynasty Resort.</p>
+      <a href="book.php" class="btn">book now</a>
+   </div>
+</section>
+<!-- home offer section ends -->
+
+<?php
+include("footer.php");
+?>
 </body>
 </html>
