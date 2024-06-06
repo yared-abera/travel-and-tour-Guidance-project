@@ -1,4 +1,4 @@
- * {
+* {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -6,11 +6,10 @@
   outline: none;
   border: none;
   text-decoration: none;
-
-} 
+}
 
 .heading {
-  background: url(images/tt.jpg) ;
+  background: url(images/tt.jpg);
   padding-top: 10rem;
   padding-bottom: 15rem;
   align-items: center;
@@ -25,7 +24,6 @@
 }
 
 .heading h1 {
- 
   font-size: 28px;
   color: var(--white);
   text-shadow: var(--text-shadow);
