@@ -26,7 +26,7 @@
 
 <body>
 
-     <div class="heading" style="background:url(images/tt.jpg) no-repeat;" >  
+     <div class="heading" >  
           <a href="home.php" class="logo"> 
           
         <h1>Book Now</h1>
