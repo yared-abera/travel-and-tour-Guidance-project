@@ -146,81 +146,98 @@
   justify-content: center;
   align-items: center;
 }
-.home-packages{
+
+.home-packages {
   background: var(--light-bg);
   background: #ebe4e4;
 }
-.home-about{
+
+.home-about {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.heading-title{
+
+.heading-title {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 6rem;
   text-transform: uppercase;
-  color:var(--black);
+  color: var(--black);
 }
-.home-packages .box-container{
+
+.home-packages .box-container {
   display: flex;
   gap: 2rem;
   margin: 5% 8%;
 }
-.home-packages .box-container .box{
-    box-shadow: var(--box-shadow);
-    background: var(--white);
-    background: white;
-    padding-bottom: 2%;
-    
- }
- 
-.home-packages .box-container .box .image{
-   height: 15rem;
-   overflow: hidden;
+
+.home-packages .box-container .box {
+  box-shadow: var(--box-shadow);
+  background: var(--white);
+  background: white;
+  padding-bottom: 2%;
 }
 
-.home-packages .box-container .box .image img{
-   height: 100%;
-   width: 100%;
-   transition: .2s linear;
+.home-packages .box-container .box .image {
+  height: 15rem;
+  overflow: hidden;
 }
 
-.home-packages .box-container .box .content{
-   text-align: center;
+.home-packages .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  transition: 0.2s linear;
 }
 
-.home-packages .box-container .box .content h3{
-   font-size: 1.5rem;
-   color:var(--black);
+.home-offer .content {
+  background: white;
+  flex: 1;
+  line-height: 250%;
+  text-align: justify;
+  padding-left: 30px;
 }
 
-.home-packages .box-container .box .content p{
-   font-size: 1.2rem;
-   color:var(--light-black);
-   padding:1rem 0;
+.home-packages .box-container .box .content {
+  text-align: center;
 }
 
-.home-packages .load-more{
-   text-align: center;
-   margin-top: 2rem;
+.home-offer .content h3 {
+  font-size: 30px;
 }
 
-.btn{
+.home-packages .box-container .box .content h3 {
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+.home-packages .box-container .box .content p {
+  font-size: 1.2rem;
+  color: var(--light-black);
+  padding: 1rem 0;
+}
+
+.home-packages .load-more {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn {
   display: inline-block;
   background: #e36308;
   margin-top: 1rem;
   font-size: 1.7rem;
-  padding:1rem 3rem;
+  padding: 1rem 3rem;
   cursor: pointer;
   text-decoration: none;
   color: white;
   border-radius: 8px;
 }
 
-.btn:hover{
+.btn:hover {
   background: #2bff00;
 }
+
 .home-offer {
   display: flex;
   text-align: center;
@@ -229,19 +246,6 @@
   padding: 5% 5%;
   background: #ded7d7;
 }
-.home-offer .content {
-  background: white;
-  flex: 1;
-  line-height: 250%;
-  text-align: justify;
-  padding-left: 30px;
-}
-.home-offer .content h3 { 
-  font-size: 30px;
-
-}
-
-
 
 @media only screen and (max-width: 450px) {
   html {
