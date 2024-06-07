@@ -5,13 +5,15 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Travel Agency Best Agency</title>
-   <!-- swiper css link  -->
+   
    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/home.css">
+   <link rel="stylesheet" href="css/footer.css">
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="css/header.css">
    <script>
       $(document).ready(function(){
           $(".scroll-top").click(function() {
@@ -24,21 +26,28 @@
    </script>
 </head>
 <body>
+  
     <!-- header section starts  -->
 <section class="header">
+   
    <a href="home.php" class="logo"><img src="images/logo.jpg"></a>
    <nav class="navbar">
-      <a href="home.php" class="active">home</a>
+      <a href="home.php">home</a>
       <a href="about.php">about</a>
       <a href="package.php">package</a>
       <a href="book.php">book</a>
+       <a href="admin.php.php" class="admin">admin</a>  
    </nav>
-   <div id="humberger" class="fas fa-bars"></div>
-</section>
+   <div class="humberger">
+   <div class="line"></div>
+   <div class="line"></div>
+   <div class="line"></div>
+</div>
+ </section>
     <!-- header section ends -->
 <!-- home section starts  -->
 <section class="home-section">
-         <div class="swiper-slide slide" style="background:url(images/home-slide-1.jpg) no-repeat">
+         <div class="swiper-slide slide" style="background:url(images/Blue_Nile.png) no-repeat">
             </div> 
 
 </section>
@@ -83,11 +92,11 @@
  <!-- home about section starts  -->
 <section class="home-about-section">
    <div class="image">
-      <img src="images/about-img.jpg" alt="iage">
+      <img src="images/wonchi.jpg" alt="iage">
    </div>
    <div class="home-about-us-content">
       <h2>about us</h2>
-      <p>Amazing Tours a Best tour Operator and Travel agent in Bangladesh. We are Tour Package, Hotel booking. Bangladesh Tours & Travel agent. Find international and domestic tour packages from bangladesh at low prices including best ... Travel Package | Honeymoon Package | Tour Package</p>
+      <p>Amazing Tours a Best tour Operator and Travel agent in Ethiopia. We have Tour Package, Hotel booking. Ethiopia Tours & Travel agent. domestic tour packages from Ethiopia at low prices including best ... Travel Package | FAMILY Package | Tour Package</p>
       <a href="about.php" class="btn">read more</a>
    </div>
 </section>
@@ -98,34 +107,34 @@
    <div class="box-container">
       <div class="box">
          <div class="image">
-            <img src="images/img-1.jpg" alt="">
+            <img src="images/simen.jpg" alt="">
          </div>
          <div class="content">
-            <h3>Dubai Tour Packages</h3>
-            <p>Enjoy the Emirates with unforgettable fun with our Dubai top selling packages!</p>
-            <h2>BDT 10,900</h2>
+            <h3>semien mountains Tour Packages</h3>
+            <p>Enjoy the ETHIOPIAN with unforgettable fun with our ETHIOPIA top selling packages!</p>
+            <h2>$50</h2>
             <a href="book.php" class="btn">book now</a>
          </div>
       </div>
       <div class="box">
          <div class="image">
-            <img src="images/gorgora..jpg" alt="gorgora">
+            <img src="images/gorgora.jpg" alt="gorgora">
          </div>
          <div class="content">
-            <h3>Delhi Tour Packages</h3>
-            <p>Enjoy the Emirates with unforgettable fun with our Delhi top selling packages!</p>
-            <h2>BDT 9,900</h2>
+            <h3>gorgora Tour Packages</h3>
+            <p>Enjoy the ETHIOPIA with unforgettable fun with our Delhi top selling packages!</p>
+            <h2>$50</h2>
             <a href="book.php" class="btn">book now</a>
          </div>
       </div>
       <div class="box">
          <div class="image">
-            <img src="images/images/Blue_Nile.png" alt="">
+            <img src="images/walia.jpg" alt="">
          </div>
          <div class="content">
-            <h3>Japan Tour Packages</h3>
+            <h3>semien Tour Packages</h3>
             <p>Enjoy the Emirates with unforgettable fun with our Japan top selling packages!</p>
-            <h2>BDT 11,900</h2>
+            <h2>$50</h2>
             <a href="book.php" class="btn">book now</a>
          </div>
       </div>
@@ -146,7 +155,6 @@
    </div>
 </section>
 <!-- home offer section ends -->
-
 <?php
 include("footer.php");
 ?>
