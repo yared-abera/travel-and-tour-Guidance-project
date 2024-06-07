@@ -355,6 +355,7 @@
     "strip-json-comments": "^2.0.1",
     "strnum": "^1.0.5",
     "strtok3": "^6.3.0",
+    "stylelint": "^14.16.1",
     "supports-color": "^7.2.0",
     "symbol-tree": "^3.2.4",
     "tar": "^6.2.1",
