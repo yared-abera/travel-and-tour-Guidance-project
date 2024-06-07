@@ -1,0 +1,150 @@
+
+.header{
+    display: flex;
+    position: sticky;
+    top:0; left:0; right:0;
+    z-index: 1000;
+    background-color: transparent;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    justify-content: space-between;
+ }
+ 
+ .header .logo{
+    font-size: 2.5rem;
+    color:black;
+ }
+ .header .navbar {
+    margin-right: 10%;
+ }
+ .header .navbar a {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    color:#247ba0;
+    text-transform: uppercase;
+    text-decoration: none;
+
+ }
+ 
+ .header .navbar a:hover{
+    color: orangered;
+    text-decoration: underline;
+ }
+ #humberger {
+   font-size: 2rem;
+   cursor: pointer;
+   color: black;
+   /* display: none; */
+   position: relative;
+   right: 20px;
+ }
+ .home-section{
+    padding:0;
+ }
+ .home-section .slide{
+    display: flex;
+    text-align: center;
+    padding:2rem;
+    align-items: center;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 60rem;
+ }
+ .services {
+    border: green solid 2px;
+ }
+
+ .services-title{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 6rem;
+    text-transform: uppercase;
+    color:black;
+ }
+
+  .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+    margin: 5% 15%;
+
+  }
+  
+  .services .box-container .box{
+    padding:3rem 2rem;
+    text-align: center;
+    background: #258b00;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    text-transform: capitalize;
+     
+ }
+
+ .home-about-section {
+    display: flex;
+   align-items: center;
+   margin: 5% 15%;
+ }
+ .home-about-section .image {
+    flex:1 1;
+ }
+ .home-about-section{
+    border: yellow solid 2px;
+    padding: 20px;
+ }
+ .home-about-section .image  img{
+  margin-right: 20px;
+  border-radius: 6px;
+  height: 350px;
+ }
+
+ .home-about-us-content h2{
+    font-size: 40px;
+    font-weight: 500;
+    color: #000202;
+    margin-bottom: 0;
+ }
+ .home-about-us-content p{
+    font-size: 1.5rem;
+    color:var(--light-black);
+    line-height: 1.1;
+    padding:1rem 0;
+    text-align: justify;
+    margin-top: 0;
+ } 
+ .home-about-us-content a{
+    text-decoration: none;
+    background: red;
+    color: white;
+    font-size: 28px;
+    border-radius: 5px;
+   padding: 12px;
+ }
+ .home-package h1{
+ font-size: 40px;
+ text-transform: uppercase;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ }
+
+
+
+  @media only screen and (max-width:450px){
+
+    html{
+       font-size: 50%;
+    }
+ 
+    .heading-title{
+       font-size: 3.5rem;
+    }
+    .logo img {
+       width: 70%;
+    }
+ 
+ }
