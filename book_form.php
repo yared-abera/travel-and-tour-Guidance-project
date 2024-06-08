@@ -1,6 +1,6 @@
 <?php
 
-$connection = mysqli_connect('localhost', 'root', 'admin123', 'book_db');
+$connection = mysqli_connect('localhost', 'root', '', 'book_db');
 if(isset($_POST['send'])){
       $name = $_POST['name'];
       $email = $_POST['email'];
@@ -17,8 +17,5 @@ if(isset($_POST['send'])){
     $_SESSION['success_message'] = "room booked successfully.";
     header('location:book.php');
 
-} else {
-    echo 'something went wrong please try again!';
-}
-
+} 
 ?>

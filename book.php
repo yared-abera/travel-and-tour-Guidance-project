@@ -35,14 +35,14 @@
 
         <h1 class="heading-title">Book Your Trip!</h1>
 
-        <?php if (isset($_SESSION['success_message']) && !empty($_SESSION['success_message'])) { ?>
+         <?php if (isset($_SESSION['success_message']) && !empty($_SESSION['success_message'])) { ?>
             <div class="success-message">
                 <?php echo $_SESSION['success_message']; ?>
             </div>
             <?php
             unset($_SESSION['success_message']);
         }
-        ?>
+        ?> 
         <form action="book_form.php" method="post" class="book-form">
 
             <div class="flex">
@@ -89,6 +89,7 @@
     </button>
     <?php
     include 'footer.php';
+    
     ?>
 
 
