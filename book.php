@@ -25,10 +25,11 @@
 </head>
 
 <body>
-
-     <div class="heading" >  
+    <?php
+include("header.php");
+?>
+     <div class="heading" style="background: url(images/tt.jpg)  no-repeat">  
           <a href="home.php" class="logo"> 
-          
         <h1>Book Now</h1>
     </div>
     <section class="booking">

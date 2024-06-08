@@ -4,12 +4,17 @@
    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Travel Agency :: Best Agency</title>
+   <title>Travel Agency Best Agency</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    <link rel="stylesheet" href="css/about.css">
+   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <div class="heading" style="background:url(images/blo.png)  no-repeat">
+<?php
+   include("header.php");
+   ?>
+ <!-- background-image: url(images/tt.jpg); -->
+   <div class="heading" style="background: url(images/lalibela.jpg)  no-repeat">
   
    
 </div>
@@ -86,12 +91,11 @@
             <span>Tour Guider</span>
             <img src="images/abebe.jfif" alt="">
          </div>
-
-         
-
       </div>
-
    </div>
 </section>
+<button type="button" class="scroll-top">
+        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+    </button>
 </body>
 </html>
