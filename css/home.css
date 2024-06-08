@@ -136,7 +136,6 @@ section {
   align-items: center;
   justify-content: space-between;
 }
-
 .header .logo {
   font-size: 2.5rem;
   color: black;
@@ -154,7 +153,6 @@ section {
   border-radius: 5px;
   padding: 12px;
 }
-
 .header .navbar a {
   font-size: 1.5rem;
   margin-left: 2rem;
@@ -304,7 +302,6 @@ section {
   margin-bottom: 0;
  
 }
-
 .home-about-us-content p {
   font-size: 1.5rem;
  
@@ -318,8 +315,6 @@ section {
   text-align: justify;
   margin-top: 0;
 }
-
- 
 .home-about-us-content .btn {
   width: 150px;
 }
@@ -411,7 +406,6 @@ section {
     font-size: 10vw;
   }
 }
- 
 .home-package h1 {
   font-size: 40px;
   text-transform: uppercase;
