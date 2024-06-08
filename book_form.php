@@ -17,5 +17,8 @@ if(isset($_POST['send'])){
     $_SESSION['success_message'] = "room booked successfully.";
     header('location:book.php');
 
-} 
+} else {
+    echo 'something went wrong please try again!';
+}
+
 ?>
