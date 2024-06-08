@@ -97,7 +97,7 @@ section {
   width: 150px;
   height: 120px;
 }
- 
+
 .header .navbar a {
   margin-left: 2rem;
   color: #247ba0;
@@ -239,11 +239,11 @@ section {
   .header .navbar.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
+
   .header .navbar a {
     display: block;
     margin: 2rem;
     text-align: center;
-    
   }
 }
 
