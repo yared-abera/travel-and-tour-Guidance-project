@@ -1,0 +1,7 @@
+.adminlogout {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
