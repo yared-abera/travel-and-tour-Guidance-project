@@ -5,11 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Travel Agency :: Best Agency</title>
-   
-
-   
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    <link rel="stylesheet" href="css/about.css">
+   <link rel="stylesheet" href="css/package.css">
     <script>
        $(document).ready(function(){
            $(".scroll-top").click(function() {
@@ -22,22 +20,8 @@
    </script>
 </head>
 <body>
-   <section class="header">
-
-   <a href="home.php" class="logo"><img src="images/logo.jpg"></a>
-
-   <nav class="navbar">
-      <a href="home.php">home</a>
-      <a href="about.php" class="active">about</a>
-      <a href="package.php">package</a>
-      <a href="book.php">book</a>
-   </nav>
-
-   <div id="menu-btn" class="fas fa-bars"></div>
-
-</section>
    
-   <div class="heading" style="background:url(images/blo.png)  no-repeat">
+<div class="heading" style="background:url(images/blo.png)  no-repeat">
       <h1>ABOUT US</h1>
   
    

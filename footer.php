@@ -7,11 +7,6 @@
     <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
-<<<<<<< HEAD
-=======
-    
-
->>>>>>> 025ae921bcc534781fbb1f0435455edc4dc6e31d
 <section class="footer">
         <div class="box-container">
             <div class="box">
