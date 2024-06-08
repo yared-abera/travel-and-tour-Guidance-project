@@ -34,7 +34,7 @@ section {
 
 /* header section style starts */
 .heading {
-  background: url(images/package-bg.jpg) no-repeat;
+  background: url(../images/souf-omer.jpg) no-repeat;
   background-size: cover !important;
   background-position: center !important;
   padding-top: 10rem;
@@ -161,16 +161,69 @@ section {
   flex: 1 1 16rem;
 }
 
+.reviews .slide .stars i {
+  font-size: 1.7rem;
+  color: var(--main-color);
+}
+
 .about .content .icons-container .icons i {
   font-size: 4rem;
   margin-bottom: 2rem;
   color: var(--main-color);
 }
 
+.reviews .slide span {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  display: block;
+}
+
 .about .content .icons-container .icons span {
   font-size: 1.5rem;
   color: var(--light-black);
   display: block;
+}
+
+.reviews {
+  background: var(--light-bg);
+}
+
+.reviews .slide {
+  padding: 2rem;
+  border: var(--border);
+  background: var(--white);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  user-select: none;
+}
+
+.reviews .slide .stars {
+  padding-bottom: 0.5rem;
+}
+
+.reviews .slide p {
+  font-size: 1.5rem;
+  color: var(--light-black);
+  line-height: 2;
+  padding: 1rem 0;
+  text-align: justify;
+}
+
+.reviews .slide h3 {
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.reviews .slide img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  margin-top: 1rem;
+}
+
+.swiper-wrapper {
+  display: flex;
+  flex-direction: row;
 }
 
 @media (max-width: 450px) {
