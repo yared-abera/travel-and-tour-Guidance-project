@@ -12,7 +12,6 @@
   align-items: center;
   justify-content: space-between;
 }
-
 .header .logo {
   font-size: 2.5rem;
   color: black;
@@ -30,7 +29,6 @@
   border-radius: 5px;
   padding: 12px;
 }
-
 .header .navbar a {
   font-size: 1.5rem;
   margin-left: 2rem;
@@ -125,7 +123,6 @@
   color: #000202;
   margin-bottom: 0;
 }
-
 .home-about-us-content p {
   font-size: 1.5rem;
   color: var(--light-black);
@@ -134,7 +131,6 @@
   text-align: justify;
   margin-top: 0;
 }
-
 .home-package h1 {
   font-size: 40px;
   text-transform: uppercase;
