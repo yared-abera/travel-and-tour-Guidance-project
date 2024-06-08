@@ -11,6 +11,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/home.css">
+   <link rel="stylesheet" href="css/package.css">
    <link rel="stylesheet" href="css/footer.css">
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="css/header.css">
@@ -27,24 +28,24 @@
 </head>
 <body>
   
-    <!-- header section starts  -->
+<!-- header section starts  -->
+
 <section class="header">
-   
+
    <a href="home.php" class="logo"><img src="images/logo.jpg"></a>
+
    <nav class="navbar">
       <a href="home.php">home</a>
       <a href="about.php">about</a>
-      <a href="package.php">package</a>
+      <a href="package.php" class="active">package</a>
       <a href="book.php">book</a>
-       <a href="admin.php.php" class="admin">admin</a>  
    </nav>
-   <div class="humberger">
-   <div class="line"></div>
-   <div class="line"></div>
-   <div class="line"></div>
-</div>
- </section>
-    <!-- header section ends -->
+
+   <div id="menu-btn" class="fas fa-bars"></div>
+
+</section>
+
+<!-- header section ends -->
 <!-- home section starts  -->
 <section class="home-section">
          <div class="swiper-slide slide" style="background:url(images/Blue_Nile.png) no-repeat">
