@@ -5,11 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Travel Agency :: Best Agency</title>
+   
+
+   
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    <link rel="stylesheet" href="css/about.css">
+    <script>
+       $(document).ready(function(){
+           $(".scroll-top").click(function() {
+               $("html, body").animate({ 
+                  scrollTop: 0 
+             }, "slow");
+               return false;
+        });
+       });
+   </script>
 </head>
 <body>
-   <div class="heading" style="background:url(images/blo.png)  no-repeat">
+   <section class="header">
+
+   <a href="home.php" class="logo"><img src="images/logo.jpg"></a>
+
+   <nav class="navbar">
+      <a href="home.php">home</a>
+      <a href="about.php" class="active">about</a>
+      <a href="package.php">package</a>
+      <a href="book.php">book</a>
+      <a href="login.php">login</a>
+   </nav>
+
+   <div id="menu-btn" class="fas fa-bars"></div>
+
+</section>
+   
+   <div class="heading" style="background:url(images/souf-omer.jpg)  no-repeat">
+      <h1>ABOUT US</h1>
   
    
 </div>
@@ -40,15 +70,16 @@
    </div>
 
 </section>
+
 <section class="reviews">
 
-   <h1 class="heading-title"> OUR TOUR GUIDERS </h1>
+   <h1 class="heading-title"> Tour Guiders </h1>
 
    <div class="swiper reviews-slider">
 
       <div class="swiper-wrapper">
 
-         <div class="swiper-slide">
+         <div class="swiper-slide slide">
             <div class="stars">
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
@@ -56,42 +87,43 @@
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
             </div>
-            <p>The best well known tour guider in ethiopia best known in ethiopian wild life.</p>
-            <h3>AZIZ AHMED</h3>
-            <span>Tour Guider</span>
+            <p>Aziz Ahmed is the best tour guider in our company best known in ethiopia wild life.</p>
+            <h3>Aziz Ahmed</h3>
+            <span>Tour guider</span>
             <img src="images/aziz ahmed.jfif" alt="">
          </div>
 
-         <div class="swiper-slide">
+         <div class="swiper-slide slide">
             <div class="stars">
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
             </div>
-            <p>Most experienced person in this company having a great knowledge in historical part of ethiopia</p>
-            <h3>KEBROM SEIFU</h3>
-            <span>Tour Guider</span>
-            <img src="images/kebrom.jfif" alt="">
-         </div>
-
-         <div class="swiper-slide">
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-            </div>
-            <p>most experienced in northern part of ethiopia</p>
-            <h3>ABEBE TEKA</h3>
-            <span>Tour Guider</span>
+            <p>Abebe Teka is one of tout guider in our company well experienced in northern part of ethiopia.</p>
+            <h3>Abebe Teka</h3>
+            <span>Tour guider</span>
             <img src="images/abebe.jfif" alt="">
          </div>
 
-         
-
+         <div class="swiper-slide slide">
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+            </div>
+            <p>kebrom is well experienced tour guider in this agency.</p>
+            <h3>Kebrom seifu</h3>
+            <span>tour guider</span>
+            <img src="images/kebrom.jfif" alt="">
+         </div>
       </div>
+      </div>
+      </section>
 
-   </div>
-</section>
+<script src="js/script.js"></script>
+<?php
+include "footer.php";
+?>
 </body>
 </html>
