@@ -13,7 +13,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css\package.css">
+   <link rel="stylesheet" href="css/package.css">
    
    
    <script>
@@ -58,7 +58,6 @@
 <!-- packages section starts  -->
 
 <section class="packages">
-
    <h1 class="heading-title">top destinations</h1>
 
    <div class="box-container">
