@@ -7,6 +7,7 @@
    <title>Travel Agency :: Best Agency</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    <link rel="stylesheet" href="css/about.css">
+   <link rel="stylesheet" href="css/package.css">
     <script>
        $(document).ready(function(){
            $(".scroll-top").click(function() {
@@ -19,8 +20,26 @@
    </script>
 </head>
 <body>
+   <!-- header section starts  -->
+
+<section class="header">
+
+<a href="home.php" class="logo"><img src="images/logo.jpg"></a>
+
+<nav class="navbar">
+   <a href="home.php">home</a>
+   <a href="about.php">about</a>
+   <a href="package.php" class="active">package</a>
+   <a href="book.php">book</a>
+</nav>
+
+<div id="menu-btn" class="fas fa-bars"></div>
+
+</section>
+
+<!-- header section ends -->
    
-   <div class="heading" style="background:url(images/blo.png)  no-repeat">
+<div class="heading" style="background:url(images/blo.png)  no-repeat">
       <h1>ABOUT US</h1>
   
    
