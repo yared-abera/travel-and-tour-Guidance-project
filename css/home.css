@@ -1,7 +1,4 @@
-
-
 /* defining variable for next use :root */
-
 :root {
   --main-color: #247ba0;
   --black: #222;
@@ -285,6 +282,7 @@ section {
   display: flex;
   flex-direction: column;
   padding-bottom: 2%;
+}
 .home-about-section .image {
   flex: 1;
 }
