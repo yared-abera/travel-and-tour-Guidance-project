@@ -106,9 +106,6 @@
   margin: 5% 15%;
   border: yellow solid 2px;
   padding: 20px;
-
-
-  /* border: #247ba0 4px solid; */
   width: 98vw;
 }
 
@@ -202,11 +199,6 @@
     animation: fadeIn 0.2s linear backwards 0.6s;
   }
 
-  /* .services {
-  /* border: #1100ff 4px solid;
-  }
-  */
-
   .services h1 {
     display: flex;
     justify-content: center;
@@ -251,6 +243,10 @@
     display: flex;
     justify-content: space-between;
     margin-right: 40px;
+  }
+
+  .logo img {
+    width: 70%;
   }
 
   .home-about-section .image img {
@@ -364,19 +360,5 @@
     display: flex;
     background: lightgrey;
     width: 97vw;
-  }
-
-  @media (max-width: 450px) {
-    html {
-      font-size: 50%;
-    }
-
-    .heading-title {
-      font-size: 3.5rem;
-    }
-
-    .logo img {
-      width: 70%;
-    }
   }
 }
