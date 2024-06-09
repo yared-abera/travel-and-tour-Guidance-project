@@ -9,7 +9,7 @@
 <body>
 <section class="header">
 
-<a href="home.php" class="logo"><img src="images/logo.jpg"></a>
+<a href="home.php" class="logo"><img src="images/travel agency.jfif"></a>
 
 <nav class="navbar">
    <a href="home.php">home</a>
