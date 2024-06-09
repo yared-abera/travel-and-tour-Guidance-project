@@ -1,4 +1,4 @@
- <?php session_start(); ?> 
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +13,7 @@
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-     <script>
+    <script>
         $(document).ready(function () {
             $(".scroll-top").click(function () {
                 $("html, body").animate({
@@ -22,48 +22,48 @@
                 return false;
             });
         });
-    </script> 
+    </script>
 </head>
 
 <body>
 
-<!-- header section starts  -->
+    <!-- header section starts  -->
 
-<section class="header">
+    <section class="header">
 
-<a href="home.php" class="logo"><img src="images/logo.jpg"></a>
+        <a href="home.php" class="logo"><img src="images/logo.jpg"></a>
 
-<nav class="navbar">
-   <a href="home.php">home</a>
-   <a href="about.php">about</a>
-   <a href="package.php" class="active">package</a>
-   <a href="book.php">book</a>
-</nav>
+        <nav class="navbar">
+            <a href="home.php">home</a>
+            <a href="about.php">about</a>
+            <a href="package.php" class="active">package</a>
+            <a href="book.php">book</a>
+        </nav>
 
-<div id="menu-btn" class="fas fa-bars"></div>
+        <div id="menu-btn" class="fas fa-bars"></div>
 
-</section>
+    </section>
 
-<!-- header section ends -->
-     
-    <div class="heading" style="background:url(images/tt.jpg) no-repeat" >  
-          <a href="home.php" class="logo"> 
-          
-        <h1>Book Now</h1>
+    <!-- header section ends -->
+
+    <div class="heading" style="background:url(images/tt.jpg) no-repeat">
+        <a href="home.php" class="logo">
+
+            <h1>Book Now</h1>
     </div>
     <section class="booking">
 
         <h1 class="heading-title">Book Your Trip!</h1>
 
-         <?php if (isset($_SESSION['success_message']) && !empty($_SESSION['success_message'])) { ?>
+        <?php if (isset($_SESSION['success_message']) && !empty($_SESSION['success_message'])) { ?>
             <div class="success-message">
                 <?php echo $_SESSION['success_message']; ?>
             </div>
             <?php
             unset($_SESSION['success_message']);
         }
-        ?> 
-        <form action="book_form.php" method="post" class="book-form">
+        ?>
+        <form action="book.php" method="post" class="book-form">
 
             <div class="flex">
                 <div class="inputBox">
@@ -109,7 +109,7 @@
     </button>
     <?php
     include 'footer.php';
-    
+
     ?>
 
 
