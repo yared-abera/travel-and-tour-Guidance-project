@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/package.css">
-
-
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
      <script>
         $(document).ready(function () {
@@ -26,30 +23,11 @@
 </head>
 
 <body>
-
-<!-- header section starts  -->
-
-<section class="header">
-
-<a href="home.php" class="logo"><img src="images/logo.jpg"></a>
-
-<nav class="navbar">
-   <a href="home.php">home</a>
-   <a href="about.php">about</a>
-   <a href="package.php" class="active">package</a>
-   <a href="book.php">book</a>
-   <a href="login.php">login</a>
-</nav>
-
-<div id="menu-btn" class="fas fa-bars"></div>
-
-</section>
-
-<!-- header section ends -->
-     
-    <div class="heading" style="background:url(images/tt.jpg) no-repeat" >  
+    <?php
+include("header.php");
+?>
+     <div class="heading" style="background: url(images/tt.jpg)  no-repeat">  
           <a href="home.php" class="logo"> 
-          
         <h1>Book Now</h1>
     </div>
     <section class="booking">

@@ -11,52 +11,36 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/home.css">
-   <link rel="stylesheet" href="css/package.css">
    <link rel="stylesheet" href="css/footer.css">
+   <link rel="stylesheet" href="css/package.css">
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="css/header.css">
-   <script>
-      $(document).ready(function(){
-          $(".scroll-top").click(function() {
-              $("html, body").animate({ 
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+       $(document).ready(function(){
+           $(".scroll-top").click(function() {
+               $("html, body").animate({ 
                   scrollTop: 0 
-              }, "slow");
-              return false;
-          });
-      });
+             }, "slow");
+               return false;
+        });
+       });
    </script>
 </head>
 <body>
-  
-<!-- header section starts  -->
-
-<section class="header">
-
-   <a href="home.php" class="logo"><img src="images/logo.jpg"></a>
-
-   <nav class="navbar">
-      <a href="home.php">home</a>
-      <a href="about.php">about</a>
-      <a href="package.php" class="active">package</a>
-      <a href="book.php">book</a>
-      <a href="login.php">login</a>
-   </nav>
-
-   <div id="menu-btn" class="fas fa-bars"></div>
+   <?php
+   include("header.php");
+   ?>
+  <!-- hhome section starts -->
+<section class="home">
+    
+<div class="swiper-slide slide" style="background:url(images/Blue_Nile.png) no-repeat"></div>
 
 </section>
-
-<!-- header section ends -->
-<!-- home section starts  -->
-<section class="home-section">
-         <div class="swiper-slide slide" style="background:url(images/Blue_Nile.png) no-repeat">
-            </div> 
-
-</section>
-<!-- home section ends -->
+ 
 <!-- begining of services section -->
 <section class="services">
-    <h1 class="services-title">our ervices</h1>
+    <h1 class="services-title">our services</h1>
     <div class="box-container">
         <div class="box">
         <img src="images/icon-2.png" alt="tour guide icon">
@@ -77,7 +61,6 @@
          <img src="images/icon-3.png" alt="">
          <h3>trekking</h3>
          </div>
-
          <div class="box">
          <img src="images/icon-5.png" alt="">
          <h3>off road</h3>
@@ -92,7 +75,7 @@
  <!-- home services section ends  -->
 
  <!-- home about section starts  -->
-<section class="home-about-section">
+<section class="home-about">
    <div class="image">
       <img src="images/wonchi.jpg" alt="iage">
    </div>
@@ -124,7 +107,7 @@
          </div>
          <div class="content">
             <h3>gorgora Tour Packages</h3>
-            <p>Enjoy the ETHIOPIA with unforgettable fun with our Delhi top selling packages!</p>
+            <p>Enjoy the ETHIOPIA with unforgettable fun with our gorgora top selling packages!</p>
             <h2>$50</h2>
             <a href="book.php" class="btn">book now</a>
          </div>
@@ -134,8 +117,8 @@
             <img src="images/walia.jpg" alt="">
          </div>
          <div class="content">
-            <h3>semien Tour Packages</h3>
-            <p>Enjoy the Emirates with unforgettable fun with our Japan top selling packages!</p>
+            <h3>semien mountain Tour Packages</h3>
+            <p>Enjoy the Emirates with unforgettable fun with our semien mountain top selling packages!</p>
             <h2>$50</h2>
             <a href="book.php" class="btn">book now</a>
          </div>
@@ -157,8 +140,13 @@
    </div>
 </section>
 <!-- home offer section ends -->
+<button type="button" class="scroll-top">
+        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+    </button>
+    
 <?php
 include("footer.php");
 ?>
+<script src="js/script.js"></script>
 </body>
 </html>
