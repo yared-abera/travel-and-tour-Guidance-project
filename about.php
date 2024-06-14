@@ -7,9 +7,11 @@
    <title>Travel Agency :: Best Agency</title>
    
 
-   
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    <link rel="stylesheet" href="css/about.css">
+   <link rel="stylesheet" href="css/package.css">
+   <link rel="stylesheet" href="css/style.css">
     <script>
        $(document).ready(function(){
            $(".scroll-top").click(function() {
@@ -24,11 +26,10 @@
 <body>
    <?php
    include("header.php");
+   include("login.php");
    ?>
    <div class="heading" style="background:url(images/souf-omer.jpg)  no-repeat">
-      <h1>ABOUT US</h1>
-  
-   
+      <h1>ABOUT US</h1>       
 </div>
    <section class="about">
 
