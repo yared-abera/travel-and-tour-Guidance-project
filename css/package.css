@@ -42,6 +42,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .heading h1 {
@@ -73,6 +74,8 @@ section {
   color: var(--black);
 }
 
+/* header section starts */
+
 .header {
   position: sticky;
   top: 0;
@@ -81,15 +84,16 @@ section {
   z-index: 1000;
   background-color: var(--white);
   display: flex;
-  padding-top: 0;
+  padding-top: 2rem;
   padding-bottom: 0;
   box-shadow: var(--box-shadow);
   align-items: center;
-  justify-content: space-between;
+  gap: 20.3%;
+  justify-content: center;
+ 
 }
 
 .header .logo {
-  font-size: 3.5rem;
   color: var(--black);
 }
 
@@ -98,17 +102,19 @@ section {
   height: 120px;
 }
 
+.header .navbar{
+  display: flex;
+   width: 100%;
+   
+}
 .header .navbar a {
+  font-size: 2rem;
   margin-left: 2rem;
   color: #247ba0;
   text-transform: uppercase;
-  font-size: 28px;
 }
-
 .header .navbar a:hover {
   color: var(--tomato);
-  transform: scale(2);
-  transition-duration: 1s;
 }
 
 #menu-btn {
@@ -116,8 +122,6 @@ section {
   color: var(--black);
   display: none;
 }
-
-/* header section style ends */
 
 /* package section style starts */
 
@@ -187,7 +191,7 @@ section {
   margin-top: 2rem;
 }
 
-/* package section style ends *
+/* package section style ends */
 
 /* media queries starts */
 
@@ -201,7 +205,7 @@ section {
   html {
     font-size: 55%;
   }
-
+   
   section {
     padding: 3rem 2rem;
   }
@@ -211,6 +215,8 @@ section {
   }
 }
 
+ 
+   
 @media (max-width: 768px) {
   .heading h1 {
     font-size: 4rem;
@@ -228,6 +234,7 @@ section {
 
   .header .navbar {
     position: absolute;
+    display: block;
     top: 99%;
     left: 0;
     right: 0;
@@ -236,7 +243,14 @@ section {
     padding: 2rem;
     transition: 0.2s linear;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
   }
+
+  .header{
+   display: flex;
+   gap: 60%;
+  }
+
 
   .header .navbar.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -258,9 +272,6 @@ section {
     font-size: 3.5rem;
   }
 
-  .logo img {
-    width: 70%;
-  }
 }
 
 /* media queries ends */

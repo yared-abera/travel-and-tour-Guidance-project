@@ -43,7 +43,7 @@ html::-webkit-scrollbar-thumb {
 
 section {
   padding: 5rem 10%;
-}
+} 
 
 @keyframes fadeIn {
   0% {
@@ -72,6 +72,19 @@ section {
   font-size: 6rem;
   text-transform: uppercase;
   color: var(--black);
+}
+.logo img {
+  width: 150px;
+  height: 120px;
+}
+
+
+
+#menu-btn {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--black);
+  display: none;
 }
 
 .home {
@@ -196,6 +209,7 @@ section {
 
 .home-packages .box-container .box:hover .image img {
   transform: scale(1.1);
+  
 }
 
 .home-packages .box-container .box .image {
@@ -267,6 +281,10 @@ section {
 }
 
 @media (max-width: 450px) {
+  /* .services{
+    display: flex;
+    flex-direction: column;
+  } */
   .home-about {
     display: flex;
     flex-direction: column;
@@ -278,5 +296,10 @@ section {
 
   .heading-title {
     font-size: 3.5rem;
+  }
+
+  .logo img {
+    width: 70%;
+   
   }
 }

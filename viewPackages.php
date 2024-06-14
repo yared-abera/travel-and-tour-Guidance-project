@@ -17,6 +17,7 @@ $result = $conn->query($sql);
 
 <!-- Display packages in a table -->
  <div class="table-div">
+
 <table border="4" class="table" border-collapse="collapse">
     <tr>
         <th>Package Name</th>

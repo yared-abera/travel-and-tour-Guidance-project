@@ -11,7 +11,9 @@
    include("header.php");
    include("dbconnect.php");
 
-   //$conn =mysqli_connect($servername, $username, $password, $dbname);
+ $conn = new mysqli($servername, $username, $password, $dbname);
+
+$connection = mysqli_connect('localhost', 'root', '', 'travel');
 if(isset($_POST['send'])){
       $name = $_POST['name'];
       $email = $_POST['email'];

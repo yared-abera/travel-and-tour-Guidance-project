@@ -51,6 +51,25 @@ section {
   text-shadow: var(--text-shadow);
 }
 
+.logo img {
+  width: 150px;
+  height: 120px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--tomato);
+  margin-top: 1rem;
+  color: var(--white);
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--main-color);
+}
+
 .heading-title {
   text-align: center;
   margin-bottom: 3rem;
@@ -181,6 +200,10 @@ section {
     font-size: 3.5rem;
   }
 
+  .logo img {
+    width: 70%;
+  }
+
   .about.image {
     display: flex;
     flex-direction: column;
@@ -210,5 +233,37 @@ section {
 @media (max-width: 768px) {
   .heading h1 {
     font-size: 4rem;
+  }
+
+  #menu-btn {
+    display: inline-block;
+    font-size: x-large;
+    transition: 0.2s linear;
+  }
+
+  #menu-btn.fa-times {
+    transform: rotate(180deg);
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    border-top: var(--border);
+    padding: 2rem;
+    transition: 0.2s linear;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .header .navbar a {
+    display: block;
+    margin: 2rem;
+    text-align: center;
   }
 }

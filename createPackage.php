@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>create package page</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/admintable.css">
 </head>
 <body>
@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <input type="number" name="price" required placeholder="Insert price in dollars">
       
       <label for="duration">Duration:</label>
-      <input type="date" name="duration" required>
+      <input type="text" name="duration" required>
       
       <label for="image">Image:</label>
       <input type="file" name="image" required accept="image/*">

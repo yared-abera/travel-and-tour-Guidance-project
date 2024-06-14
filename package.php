@@ -1,64 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <link rel="stylesheet" href="css/package.css">
-  <link rel="stylesheet" href="css/style.css">
-  <title>packages page</title>
-  <script>
- 
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Travel Agency :: Best Agency</title>
-
-   <!-- swiper css link 
-   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" /> -->
-
-   <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-   <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/package.css">
- 
-   <link rel="stylesheet" href="css/footer.css">
- 
-   <link rel="stylesheet" href="css/style.css">
-   
-   
-   <script>
- 
-       $(document).ready(function(){
-           $(".scroll-top").click(function() {
-               $("html, body").animate({ 
-                  scrollTop: 0 
-             }, "slow");
-               return false;
-        });
-       });
-   </script>
- 
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="css/package.css">
+  <link rel="stylesheet"  type="text/css" href="css/header.css">
+  
 </head>
 <body>
 
 <?php
+ include("header.php");
+ include("login.php");
+ include("register.php");
 require_once "dbconnect.php";
-include("header.php");
 // Fetch package details from the database
 $sql = "SELECT * FROM packages";
 $result = $conn->query($sql);
-echo '<div class="heading" style="background:url(images/package-bg.jpg) no-repeat">
-<h1>packages</h1>
-</div>';
-echo '<section class="packages">
-<h1 class="heading-title">top destinations</h1>
-<div class="box-container">';
+
 // Check if packages are available
 if ($result->num_rows > 0) {
+   
+    echo '<div class="heading" style="background:url(images/package-bg.jpg) no-repeat">
+            <h1>packages</h1>
+          </div>';
+    echo '<section class="packages">
+            <h1 class="heading-title">top destinations</h1>
+            <div class="box-container">';
+    
     while ($row = $result->fetch_assoc()) {
         $packageName = $row["package_name"];
         $description = $row["description"];
@@ -85,9 +56,6 @@ if ($result->num_rows > 0) {
     echo "<p>No packages available.</p>";
 }
 ?>
- <button type="button" class="scroll-top">
-        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
-    </button>
 <script src="js/script.js"></script>
 </body>
 </html>

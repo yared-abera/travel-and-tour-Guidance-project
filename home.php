@@ -5,22 +5,16 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Travel Agency Best Agency</title>
-      <!-- font awesome cdn link  -->
+   
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/home.css">
- 
-   <link rel="stylesheet" href="css/style.css">
- 
    <link rel="stylesheet" href="css/footer.css">
    <link rel="stylesheet" href="css/package.css">
-   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <link rel="stylesheet" href="css/header.css">
- 
-    <link rel="stylesheet" href="css/style.css">
- 
- 
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+     <link rel="stylesheet" href="css/style.css">
     <script>
        $(document).ready(function(){
            $(".scroll-top").click(function() {
@@ -33,65 +27,20 @@
    </script>
 </head>
 <body>
- 
- 
-
-<!-- header section starts  -->
-
-<section class="header">
- 
-  
-<!-- header section starts  -->
-
-<section class="header">
-
- 
-   <a href="home.php" class="logo"><img src="images/logo.jpg"></a>
-
-   <nav class="navbar">
-      <a href="home.php">home</a>
-      <a href="about.php">about</a>
-      <a href="package.php" class="active">package</a>
-      <a href="book.php">book</a>
- 
-   </nav>
-   <div id="menu-btn" class="fas fa-bars"></div>
-</section>
-
-
-
- 
-<section class="home">
-    
-<div class="swiper-slide slide" style="background:url(images/Blue_Nile.png) no-repeat"></div>
- 
-      <a href="login.php">login</a>
-   </nav>
-
-   <div id="menu-btn" class="fas fa-bars"></div>
-
-</section>
-
-<!-- header section ends -->
-<!-- home section starts  -->
-<section class="home-section">
-         <div class="swiper-slide slide" style="background:url(images/Blue_Nile.png) no-repeat">
-            </div> 
-  
-
-</section>
- 
    <?php
    include("header.php");
+   include("login.php");
+   include("register.php");
    ?>
   <!-- hhome section starts -->
 <section class="home">
-    
+  
 <div class="swiper-slide slide" style="background:url(images/Blue_Nile.png) no-repeat"></div>
+ 
 
 </section>
  
- 
+
 <!-- begining of services section -->
 <section class="services">
     <h1 class="services-title">our services</h1>
@@ -100,7 +49,7 @@
         <img src="images/icon-2.png" alt="tour guide icon">
          <h3>tour guide</h3>
         </div>
-
+        
         <div class="box">
          <img src="images/icon-6.png" alt="">
          <h3>camping</h3>
