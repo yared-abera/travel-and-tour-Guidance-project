@@ -13,12 +13,26 @@
    <link rel="stylesheet" href="css/login.css">
 
 </head>
-<body>
-    <div class="form-container">
 
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register page</title>
+</head>
+<body>
+     <!--register section starts -->
+     <body>
+    <div class="form-container">
+   
    <form action="" method="post">
       <h3>register now</h3>
-      <input type="text" name="name" placeholder="enter your name" required class="box">
+      <input type="text" name="name" placeholder="enter your username" required class="box">
       <input type="email" name="email" placeholder="enter your email" required class="box">
       <input type="password" name="password" placeholder="enter your password" required class="box">
       <input type="password" name="cpassword" placeholder="confirm your password" required class="box">
@@ -29,5 +43,8 @@
 
 </div>
 
+
+    <script src="script.js"></script>
+    <!-- register section ends -->
 </body>
 </html>

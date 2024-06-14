@@ -1,85 +1,86 @@
- <?php session_start(); ?> 
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel and Guidance</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-     <script>
-        $(document).ready(function () {
-            $(".scroll-top").click(function () {
-                $("html, body").animate({
-                    scrollTop: 0
-                }, "slow");
-                return false;
-            });
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Travel and Guidance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/package.css">
+    
+    <script>
+       $(document).ready(function(){
+           $(".scroll-top").click(function() {
+               $("html, body").animate({ 
+                  scrollTop: 0 
+             }, "slow");
+               return false;
         });
-    </script> 
+       });
+   </script>
+
 </head>
 
 <body>
     <?php
-include("header.php");
-?>
-     <div class="heading" style="background: url(images/tt.jpg)  no-repeat">  
-          <a href="home.php" class="logo"> 
+    include("header.php");
+    include("login.php");
+    ?>
+    <div class="heading" style="background: url(images/tt.jpg) no-repeat">
         <h1>Book Now</h1>
     </div>
     <section class="booking">
-
         <h1 class="heading-title">Book Your Trip!</h1>
-
-        <?php if (isset($_SESSION['success_message']) && !empty($_SESSION['success_message'])) { ?>
-            <div class="success-message">
-                <?php echo $_SESSION['success_message']; ?>
-            </div>
-            <?php
-            unset($_SESSION['success_message']);
-        }
-        ?>
         <form action="book_form.php" method="post" class="book-form">
 
             <div class="flex">
                 <div class="inputBox">
-                    <span>name :</span>
-                    <input type="text" placeholder="enter your name" name="name" required="required">
+                    <span>Name:</span>
+                    <input type="text" placeholder="Enter your name" name="name" required="required">
                 </div>
                 <div class="inputBox">
-                    <span>email :</span>
-                    <input type="email" placeholder="enter your email" name="email" required="required">
+                    <span>Email:</span>
+                    <input type="email" placeholder="Enter your email" name="email" required="required">
                 </div>
                 <div class="inputBox">
-                    <span>phone :</span>
-                    <input type="number" placeholder="enter your number" name="phone" required="required">
+                    <span>Phone:</span>
+                    <input type="number" placeholder="Enter your phone number" name="phone" required="required">
                 </div>
                 <div class="inputBox">
-                    <span>address :</span>
-                    <input type="text" placeholder="enter your address" name="address" required="required">
+                    <span>Address:</span>
+                    <input type="text" placeholder="Enter your address" name="address" required="required">
                 </div>
                 <div class="inputBox">
-                    <span>where to :</span>
-                    <input type="text" placeholder="place you want to visit" name="location" required="required">
+                    <span>Location:</span>
+                    <input type="text" placeholder="Place you want to visit" name="location" required="required">
                 </div>
                 <div class="inputBox">
-                    <span>how many :</span>
-                    <input type="number" placeholder="number of guests" name="guests" required="required">
+                    <span>Guests:</span>
+                    <input type="number" placeholder="Number of guests" name="guests" required="required">
                 </div>
                 <div class="inputBox">
-                    <span>arrivals :</span>
+                    <span>Arrivals:</span>
                     <input type="date" name="arrivals" required="required">
                 </div>
                 <div class="inputBox">
-                    <span>leaving :</span>
+                    <span>Leaving:</span>
                     <input type="date" name="leaving" required="required">
                 </div>
+                <!-- <div class="inputBox">
+                    <span>Booking Status:</span>
+                    <select name="booking_status" required="required">
+                        <option value="">Select Booking Status</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Confirmed">Confirmed</option>
+                        <option value="Cancelled">Cancelled</option>
+                    </select>
+                </div> -->
+                
             </div>
 
-            <input type="submit" value="submit" class="btn" name="send">
+            <input type="submit" value="Submit" class="btn" name="send">
 
         </form>
     </section>
@@ -89,11 +90,6 @@ include("header.php");
     <?php
     include 'footer.php';
     ?>
-
-
-
-
-
 </body>
 
 </html>

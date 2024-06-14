@@ -1,6 +1,12 @@
+
 @media only screen and(max-width: 768) {
   .header .navbar {
     display: flex;
     flex-direction: column;
   }
 }
+
+
+
+/* header section style ends */
+

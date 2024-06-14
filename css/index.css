@@ -1,0 +1,16 @@
+.content{
+	height: 40px;
+}
+.content img{
+	height: 40px;
+}
+.butons{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.adminnav{
+	font-size: 40px;
+}

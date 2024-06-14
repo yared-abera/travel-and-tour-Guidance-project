@@ -13,9 +13,8 @@
    <link rel="stylesheet" href="css/home.css">
    <link rel="stylesheet" href="css/footer.css">
    <link rel="stylesheet" href="css/package.css">
-   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/style.css">
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+   <!-- <link rel="stylesheet" href="css/style.css"> -->
     <script>
        $(document).ready(function(){
            $(".scroll-top").click(function() {
@@ -30,14 +29,17 @@
 <body>
    <?php
    include("header.php");
+   include("login.php");
    ?>
   <!-- hhome section starts -->
 <section class="home">
-    
+  
 <div class="swiper-slide slide" style="background:url(images/Blue_Nile.png) no-repeat"></div>
+ 
 
 </section>
  
+
 <!-- begining of services section -->
 <section class="services">
     <h1 class="services-title">our services</h1>
@@ -46,7 +48,7 @@
         <img src="images/icon-2.png" alt="tour guide icon">
          <h3>tour guide</h3>
         </div>
-
+        
         <div class="box">
          <img src="images/icon-6.png" alt="">
          <h3>camping</h3>
