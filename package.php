@@ -14,6 +14,9 @@
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/package.css">
+ 
+   <link rel="stylesheet" href="css/footer.css">
+ 
    <link rel="stylesheet" href="css/style.css">
    
    
@@ -28,6 +31,7 @@
        });
    </script>
 
+ 
 </head>
 <body>
    
