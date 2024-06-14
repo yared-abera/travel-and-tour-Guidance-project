@@ -27,6 +27,7 @@
     <?php
     include("header.php");
     include("login.php");
+    include("register.php");
     ?>
     <div class="heading" style="background: url(images/tt.jpg) no-repeat">
         <h1>Book Now</h1>

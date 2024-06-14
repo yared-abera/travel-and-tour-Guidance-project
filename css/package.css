@@ -75,6 +75,7 @@ section {
 }
 
 /* header section starts */
+
 .header {
   position: sticky;
   top: 0;
@@ -87,7 +88,6 @@ section {
   padding-bottom: 0;
   box-shadow: var(--box-shadow);
   align-items: center;
-  border: 2px solid #247ba0;
   gap: 20.3%;
   justify-content: center;
  
@@ -103,11 +103,12 @@ section {
 }
 
 .header .navbar{
-   width: 70%;
   display: flex;
-  border: 2px solid #24a037;
+   width: 100%;
+   
 }
 .header .navbar a {
+  font-size: 2rem;
   margin-left: 2rem;
   color: #247ba0;
   text-transform: uppercase;
@@ -233,6 +234,7 @@ section {
 
   .header .navbar {
     position: absolute;
+    display: block;
     top: 99%;
     left: 0;
     right: 0;
@@ -241,7 +243,14 @@ section {
     padding: 2rem;
     transition: 0.2s linear;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
   }
+
+  .header{
+   display: flex;
+   gap: 60%;
+  }
+
 
   .header .navbar.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);

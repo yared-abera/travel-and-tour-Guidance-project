@@ -14,7 +14,7 @@
    <link rel="stylesheet" href="css/footer.css">
    <link rel="stylesheet" href="css/package.css">
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
-   <!-- <link rel="stylesheet" href="css/style.css"> -->
+     <link rel="stylesheet" href="css/style.css">
     <script>
        $(document).ready(function(){
            $(".scroll-top").click(function() {
@@ -30,6 +30,7 @@
    <?php
    include("header.php");
    include("login.php");
+   include("register.php");
    ?>
   <!-- hhome section starts -->
 <section class="home">

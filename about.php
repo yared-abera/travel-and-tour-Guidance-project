@@ -27,6 +27,7 @@
    <?php
    include("header.php");
    include("login.php");
+   include("register.php");
    ?>
    <div class="heading" style="background:url(images/souf-omer.jpg)  no-repeat">
       <h1>ABOUT US</h1>       

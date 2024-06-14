@@ -1,10 +1,9 @@
-
 document.addEventListener("DOMContentLoaded", function () {
-    var loginBtn = document.getElementById("loginBtn");
-    var modal = document.getElementById("loginModal");
-    var closeBtn = document.getElementById("closeBtn");
+    var signupBtn = document.getElementById("signupBtn");
+    var modal = document.getElementById("registerModal");
+    var closeBtn = document.getElementById("closeBtn-register");
 
-    loginBtn.addEventListener("click", function () {
+    signupBtn.addEventListener("click", function () {
         modal.style.display = "flex";
     });
 
@@ -18,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
 
 function validateForm() {
     var username = document.getElementById('username').value;
@@ -36,5 +34,3 @@ function validateForm() {
 
     return true;
 }
-
-

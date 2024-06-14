@@ -1,5 +1,5 @@
  
-#loginBtn {
+#registerBtn {
     font-size: 2rem;
 }
 .modal {
@@ -14,9 +14,6 @@
     overflow: auto; 
     background-color: rgba(0, 0, 0, 0.5); 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    
-
-
 }
 
 .modal-content form input{
@@ -24,7 +21,7 @@
     
 }
 
-#loginmodal {
+#registermodal {
   height: 500px;  
 }
 
@@ -32,7 +29,7 @@
     font-size: 1.2em;
     color: rgb(255, 255, 255);
     background-color: rgb(21, 0, 252);
-    padding: 8px;
+   
     border-radius: 10px;
 }
 .modal-content {
@@ -40,7 +37,7 @@
     margin: 5% auto;
     padding:40px;
     border: 1px solid #888;
-    width: 700px; 
+    width: 40%; 
     line-height: 170%;
     position: relative;
     /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7); */
@@ -49,28 +46,29 @@
     color: white;
     text-align: center;
 }
-.modal-content p a{
-    background-color: aliceblue;
-    color: black;
-    border-radius: 10%;
-    padding-left: 7px;
-    padding-right: 7px;
-  }
-  
-  .modal-content p a:hover{ 
-      transition-duration: 1s;
-      color: rgb(3, 167, 0);  
-    }
 
-#closeBtn {
+.modal-content p a{
+  background-color: aliceblue;
+  color: black;
+  border-radius: 10%;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.modal-content p a:hover{ 
+    transition-duration: 1s;
+    color: rgb(3, 167, 0);
+    
+  }
+#closeBtn-register {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-#closeBtn:hover,
-#closeBtn:focus {
+#closeBtn-register:hover,
+#closeBtn-register:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
