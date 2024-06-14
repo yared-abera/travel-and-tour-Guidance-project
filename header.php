@@ -16,7 +16,7 @@
    <a href="about.php">about</a>
    <a href="package.php" class="active">package</a>
    <a href="book.php">book</a>
-   <a href="adminlogin.php" style="font-size:12px">admin</a> 
+   <a href="index.php" style="font-size:12px">admin</a> 
 
 </nav>
 

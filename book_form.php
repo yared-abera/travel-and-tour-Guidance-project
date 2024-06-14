@@ -9,8 +9,9 @@
 
 <?php
    include("header.php");
+   include("dbconnect.php");
 
-$connection = mysqli_connect('localhost', 'root', 'admin123', 'book_db');
+   //$conn =mysqli_connect($servername, $username, $password, $dbname);
 if(isset($_POST['send'])){
       $name = $_POST['name'];
       $email = $_POST['email'];
@@ -21,10 +22,10 @@ if(isset($_POST['send'])){
       $arrivals = $_POST['arrivals'];
       $leaving = $_POST['leaving'];
       
-    $request = " insert into book_form(name, email, phone, address, location, guests, arrivals, leaving) values('$name','$email','$phone','$address','$location','$guests','$arrivals','$leaving') ";
-    mysqli_query($connection, $request);
+    $request = " insert into bookings (name, email, phone, address, location, guests, arrivals, leaving) values('$name','$email','$phone','$address','$location','$guests','$arrivals','$leaving') ";
+    mysqli_query($conn, $request);
     session_start();
-    $_SESSION['success_message'] = "room booked successfully.";
+    $_SESSION['success_message'] = "booked successfully.";
     header('location:book.php');
 
 } else {
