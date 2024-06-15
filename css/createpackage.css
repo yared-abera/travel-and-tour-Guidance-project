@@ -1,42 +1,13 @@
-.table-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+html {
+  background: url(../images/abuneYmata.png);
 }
 
-.table {
-  width: auto;
-  margin: 3%;
-  border-collapse: collapse;
-  background: white;
-}
-
-td,
-th {
-  border: 4px solid black;
-  padding: 8px;
-  color: black;
-  font-size: 28px;
-}
-
-.table-div .back {
-  display: flex;
-  justify-content: flex-end;
-  right: 10%;
-  background: black;
+.createform h1 {
   color: white;
-  font-size: 150%;
-  border-radius: 10px;
-  position: fixed;
-  font-family: sans-serif;
 }
-
-/* style for create package form */
 
 .createform {
   display: flex;
-  background-color: white;
   flex-direction: column;
   align-items: center;
   margin: 30px 20%;
@@ -49,7 +20,8 @@ th {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+
+  /* background-color: white; */
   width: 80%;
   height: 90%;
 }
@@ -57,7 +29,8 @@ th {
 .createform form input {
   width: 50%;
   height: 20%;
-  border: tomato 2px solid;
+  color: black;
+  border: black 2px solid;
   margin-bottom: 10px;
 }
 
@@ -85,11 +58,4 @@ th {
   font-family: sans-serif;
   font-weight: 150;
   font-style: italic;
-}
-
-.container h2 {
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-  color: aqua;
 }

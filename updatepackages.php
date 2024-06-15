@@ -1,77 +1,61 @@
 <?php
 require_once "dbconnect.php";
 
-// Check if the package ID is provided in the URL
-if (isset($_GET['update'])) {
-    $updateId = $_GET['update'];
+// Check if the form was submitted
+if (isset($_POST['id'])) {
+    $id = $_POST['id']; // Get the package_id from the form submission
 
-    // Fetch the existing package information from the database
-    $selectQuery = "SELECT * FROM packages WHERE id = ?";
-    $stmt = $conn->prepare($selectQuery);
-    $stmt->bind_param("i", $updateId);
+    // Fetch existing data to populate the update form
+    $sql = "SELECT * FROM packages WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $id);
     $stmt->execute();
     $result = $stmt->get_result();
-    $row = $result->fetch_assoc();
 
-    // Check if the form is submitted
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Get the updated form data
-        $updatedPackageName = $_POST['package_name'];
-        $updatedDescription = $_POST['description'];
-        $updatedPrice = $_POST['price'];
-        $updatedDuration = $_POST['duration'];
-        $updatedImagePath = $_POST['image_path'];
-
-        // Update the package in the database
-        $updateQuery = "UPDATE packages SET package_name = ?, description = ?, price = ?, duration = ?, image_path = ? WHERE id = ?";
-        $stmt = $conn->prepare($updateQuery);
-        $stmt->bind_param("ssdssi", $updatedPackageName, $updatedDescription, $updatedPrice, $updatedDuration, $updatedImagePath, $updateId);
-
-        if ($stmt->execute()) {
-            
-            header("Location: viewPackages.php");
-            exit;
-        } else {
-            echo "Error updating package: " . $stmt->error;
-        }
-
-        $stmt->close();
-    }
-} else {
-    
-    header("Location: adminhome.php");
-    exit;
-}
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        // Populate form with existing data
+        echo "<!DOCTYPE html>
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Package</title>
-    <link rel="stylesheet" href="css/admintable.css">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Update package</title>
+    <link rel='stylesheet' href='admintable.css'>
 </head>
 <body>
-    <h1>Update Package</h1>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . "?update=" . $updateId; ?>">
-        <label for="package_name">Package Name:</label>
-        <input type="text" id="package_name" name="package_name" value="<?php echo $row['package_name']; ?>"><br>
 
-        <label for="description">Description:</label>
-        <textarea id="description" name="description"><?php echo $row['description']; ?></textarea><br>
+<form method='post' action='process update.php' enctype='multipart/form-data' class='createform'>
+    <input type='hidden' name='id' value='" . $row["id"] . "'>
+    <label for='package_name'>Package Name:</label><br>
+    <input type='text' id='package_name' name='package_name' value='" . $row["package_name"] . "'><br>
+    
+    <label for='description'>description:</label><br>
+    <input type='text' id='description' name='description' value='" . $row["description"] . "'><br>
+    
+    <label for='price'>Price:</label><br>
+    <input type='text' id='price' name='price' value='" . $row["price"] . "'><br>
 
-        <label for="price">Price:</label>
-        <input type="number" id="price" name="price" value="<?php echo $row['price']; ?>"><br>
+     <label for='duration'>Duration:</label><br>
+    <input type='text' id='duration' name='duration' value='" . $row["duration"] . "'><br>
+    
+    <label for='current_image_path'>Current Image Path:</label><br>
+    <input type='text' id='current_image_path' name='current_image_path' value='" . $row["image_path"] . "' readonly><br>
+    
+    <label for='image'>New Image:</label><br>
+    <input type='file' id='image' name='image'><br>
+    
+    <input type='submit' value='Update'>
+</form>
 
-        <label for="duration">Duration:</label>
-        <input type="text" id="duration" name="duration" value="<?php echo $row['duration']; ?>"><br>
-
-        <label for="image_path">Image Path:</label>
-        <input type="text" id="image_path" name="image_path" value="<?php echo $row['image_path']; ?>"><br>
-
-        <input type="submit" value="Update">
-    </form>
 </body>
-</html>
+</html>";
+    } else {
+        echo "Record not found";
+    }
+    $stmt->close();
+    $conn->close();
+} else {
+    echo "Invalid request. package_id is missing.";
+}
+?>

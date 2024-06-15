@@ -1,19 +1,13 @@
 <?php
-require_once "dbconnect.php";
+require"dbconnect.php";
+$id = $_POST['id'];
 
-if(isset($_GET['package_name'])){
-   $package_name = $_GET['package_name'];
-   $sql = "DELETE FROM packages WHERE package_name = ?";
-   $stmt = $conn->prepare($sql);
-   $stmt->bind_param("s", $package_name);
-
-   if ($stmt->execute()) {
-       echo "Package deleted successfully.";
-       header('location:viewPackage.php');
-   } else {
-       echo "Error deleting package: " . $stmt->error;
-   }
-
-   $stmt->close();
+$sql = "DELETE FROM packages WHERE id='$id'";
+if ($conn->query($sql) === TRUE) {
+    echo "Record deleted successfully";
+} else {
+    echo "Error deleting record: " . $conn->error;
 }
+
+$conn->close();
 ?>
