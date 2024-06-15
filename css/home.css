@@ -74,28 +74,6 @@ section {
   color: var(--black);
 }
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background-color: var(--white);
-  display: flex;
-  padding-top: 0;
-  padding-bottom: 0;
-  box-shadow: var(--box-shadow);
-  align-items: center;
-  justify-content: space-between;
-}
-
-#menu-btn {
-  font-size: 2.5rem;
-  cursor: pointer;
-  color: var(--black);
-  display: none;
-}
-
 .home {
   padding: 0;
 }
@@ -289,10 +267,6 @@ section {
 }
 
 @media (max-width: 450px) {
-  /* .services{
-    display: flex;
-    flex-direction: column;
-  } */
   .home-about {
     display: flex;
     flex-direction: column;
@@ -304,9 +278,5 @@ section {
 
   .heading-title {
     font-size: 3.5rem;
-  }
-
-  .logo img {
-    width: 70%;
   }
 }
