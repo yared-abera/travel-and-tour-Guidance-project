@@ -3,7 +3,6 @@ const menuBtn = document.querySelector('#menu-btn');
 const navbar = document.querySelector('.header .navbar');
 const loadMoreBtn = document.querySelector('.packages .load-more .btn');
 const packageContainer = document.querySelector('.packages .box-container');
-const sidebarMenuItems = document.querySelectorAll('#sidebar .side-menu.top li a');
 
 // Initialize variables
 let currentItem = 2;
@@ -23,7 +22,7 @@ window.addEventListener('scroll', () => {
 // Load more packages
 loadMoreBtn.addEventListener('click', () => {
   const boxes = packageContainer.querySelectorAll('.box');
-  for (let i = currentItem; i < currentItem + 2 && i < boxes.length; i++) {
+  for (let i = currentItem; i < currentItem + 2 && i < boxes.length; i += 1) {
     boxes[i].style.display = 'inline-block';
   }
   currentItem += 2;
@@ -32,21 +31,16 @@ loadMoreBtn.addEventListener('click', () => {
   }
 });
 
- 
-// // Alternative "See More" functionality
-// loadMoreBtn.addEventListener('click', () => {
-//   const packageBoxes = packageContainer.querySelectorAll('.box');
-//   for (let i = currentPackages; i < currentPackages + 2 && i < packageBoxes.length; i++) {
-//     packageBoxes[i].style.display = 'block';
-//   }
-//   currentPackages += 2;
-//   if (currentPackages >= packageBoxes.length) {
-//     loadMoreBtn.style.display = 'none';
-//   }
-// });
+// Alternative "See More" functionality
+loadMoreBtn.addEventListener('click', () => {
+  const packageBoxes = packageContainer.querySelectorAll('.box');
+  for (let i = currentPackages; i < currentPackages + 2 && i < packageBoxes.length; i += 1) {
+    packageBoxes[i].style.display = 'block';
+  }
+  currentPackages += 2;
+  if (currentPackages >= packageBoxes.length) {
+    loadMoreBtn.style.display = 'none';
+  }
+});
 
-
-//after this vaon will continue
-
-
-
+// after this vaon will continue
