@@ -6,6 +6,7 @@
     <title>header</title>
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/package.css">
 
     <script src="js/login.js"></script>
     <script src="js/register.js"></script>

@@ -1,1 +1,39 @@
- 
+.adminlogout {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .butons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .butons .adminnav {
+    background-color: tomato;
+    border: none;
+  
+    /* color: tomato; */
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 300%;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .butons button:hover {
+    background-color: #43b6d2;
+  }
+  
+  .butons a {
+    color: white;
+    text-decoration: none;
+  } 
