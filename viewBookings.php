@@ -1,64 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/admintable.css">
-     
-
 </head>
+
 <body>
-    
-<?php
- include("header.php");
-require_once "dbconnect.php";
 
-$sql = "SELECT * FROM bookings";
-$result = $conn->query($sql);
-?>
+    <?php
+    // include("adminhome.php");
+    require_once "dbconnect.php";
+    ;
+    $sql = "SELECT * FROM bookings";
+    $result = $conn->query($sql);
+    ?>
 
-<!-- Display bookings in a table -->
- <div class="table-div">
-<table border="4" class="table" border-collapse="collapse">
+    <!-- Display packages in a table -->
+    <div class="table-div">
+
+        <div class="back">
+            <button id="backButton">Back</button>
+        </div>
+        <!-- table content -->
+    </div>
+
+    <script>
+        // Add an event listener to the back button
+        document.getElementById('backButton').addEventListener('click', navigateToAdminHome);
+
+        function navigateToAdminHome() {
+            // Redirect to the adminhome.php page
+            window.location.href = 'adminhome.php';
+        }
+    </script>
+<table>
     <tr>
-       <th>Booking ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Address</th>
-        <th>Location</th>
-        <th>Guests</th>
-        <th>Arrivals</th>
-        <th>Leaving</th>
+        <th>Customer Name</th>
+        <th>Contact Details</th>
+        <th>Selected Package</th>
         <th>Booking Status</th>
-        
     </tr>
     <?php
-   
+    // include("adminhome.php");
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-
             echo "<tr>";
-
-            echo "<td>" . $row["booking_id"] . "</td>";
-            echo "<td>" . $row["name"] . "</td>";
-            echo "<td>" . $row["email"] . "</td>";
-            echo "<td>" . $row["phone"] . "</td>";
-            echo "<td>" . $row["address"] . "</td>";
-            echo "<td>" . $row["location"] . "</td>";
-            echo "<td>" . $row["guests"] . "</td>";
-            echo "<td>" . $row["arrivals"] . "</td>";
-            echo "<td>" . $row["leaving"] . "</td>";
+            echo "<td>" . $row["customer_name"] . "</td>";
+            echo "<td>" . $row["contact_details"] . "</td>";
+            echo "<td>" . $row["selected_package"] . "</td>";
             echo "<td>" . $row["booking_status"] . "</td>";
-
             echo "</tr>";
         }
     } else {
-        echo "<tr><td colspan='10'>No bookings found</td></tr>";
+        echo "<tr><td colspan='4'>No bookings found</td></tr>";
     }
     ?>
 </table>
-</div>
-</body>
-</html>
