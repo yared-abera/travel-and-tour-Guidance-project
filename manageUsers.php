@@ -1,9 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/admintable.css">
+</head>
+
+<body>
+
 <?php
 require_once "dbconnect.php";
 
 $sql = "SELECT * FROM users";
 $result = $conn->query($sql);
 ?>
+<div class="table-div">
+
+        <div class="back">
+            <button id="backButton">Back</button>
+        </div>
+        <!-- table content -->
+    </div>
+
+    <script>
+        // Add an event listener to the back button
+        document.getElementById('backButton').addEventListener('click', navigateToAdminHome);
+
+        function navigateToAdminHome() {
+            // Redirect to the adminhome.php page
+            window.location.href = 'adminhome.php';
+        }
+    </script>
 
 <!-- Display users in a table -->
 <table>
