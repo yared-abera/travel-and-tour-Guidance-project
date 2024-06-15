@@ -1,4 +1,4 @@
- 
+
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -9,7 +9,6 @@
 
 /* Heading styles */
 .heading {
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,10 +26,12 @@
   font-size: 4rem;
   color: var(--white);
   text-shadow: var(--text-shadow);
+
   /* text-align: center; */
 }
 
 /* Booking form styles */
+
 /* .booking {
   background-color: rgb(54, 238, 41);
 } */
@@ -92,6 +93,7 @@
 .booking .book-form .btn {
   margin-top: 2rem;
   background-color: tomato;
+
   /* border: 4px green dashed; */
 }
 

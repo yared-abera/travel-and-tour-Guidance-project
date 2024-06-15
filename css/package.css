@@ -42,7 +42,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .heading h1 {
@@ -90,7 +89,6 @@ section {
   align-items: center;
   gap: 20.3%;
   justify-content: center;
- 
 }
 
 .header .logo {
@@ -102,17 +100,18 @@ section {
   height: 120px;
 }
 
-.header .navbar{
+.header .navbar {
   display: flex;
-   width: 100%;
-   
+  width: 100%;
 }
+
 .header .navbar a {
   font-size: 2rem;
   margin-left: 2rem;
   color: #247ba0;
   text-transform: uppercase;
 }
+
 .header .navbar a:hover {
   color: var(--tomato);
 }
@@ -205,7 +204,7 @@ section {
   html {
     font-size: 55%;
   }
-   
+
   section {
     padding: 3rem 2rem;
   }
@@ -215,8 +214,6 @@ section {
   }
 }
 
- 
-   
 @media (max-width: 768px) {
   .heading h1 {
     font-size: 4rem;
@@ -243,14 +240,12 @@ section {
     padding: 2rem;
     transition: 0.2s linear;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-
   }
 
-  .header{
-   display: flex;
-   gap: 60%;
+  .header {
+    display: flex;
+    gap: 60%;
   }
-
 
   .header .navbar.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -271,7 +266,6 @@ section {
   .heading-title {
     font-size: 3.5rem;
   }
-
 }
 
 /* media queries ends */
