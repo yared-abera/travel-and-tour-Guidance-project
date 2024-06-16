@@ -6,7 +6,7 @@ if (isset($_POST['id'])) {
     $id = $_POST['id']; // Get the package_id from the form submission
 
     // Fetch existing data to populate the update form
-    $sql = "SELECT * FROM packages WHERE id = ?";
+    $sql = "SELECT * FROM packages WHERE package_id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id);
     $stmt->execute();
@@ -26,7 +26,7 @@ if (isset($_POST['id'])) {
 <body>
 
 <form method='post' action='process update.php' enctype='multipart/form-data' class='createform'>
-    <input type='hidden' name='id' value='" . $row["id"] . "'>
+    <input type='hidden' name='id' value='" . $row["package_id"] . "'>
     <label for='package_name'>Package Name:</label><br>
     <input type='text' id='package_name' name='package_name' value='" . $row["package_name"] . "'><br>
     
@@ -37,7 +37,7 @@ if (isset($_POST['id'])) {
     <input type='text' id='price' name='price' value='" . $row["price"] . "'><br>
 
      <label for='duration'>Duration:</label><br>
-    <input type='text' id='duration' name='duration' value='" . $row["duration"] . "'><br>
+    <input type='date' id='duration' name='duration' value='" . $row["duration"] . "'><br>
     
     <label for='current_image_path'>Current Image Path:</label><br>
     <input type='text' id='current_image_path' name='current_image_path' value='" . $row["image_path"] . "' readonly><br>
@@ -58,4 +58,3 @@ if (isset($_POST['id'])) {
 } else {
     echo "Invalid request. package_id is missing.";
 }
-?>

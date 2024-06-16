@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>view packages</title>
     <link rel="stylesheet" href="css/admintable.css">
-
     <script>
         function confirmDelete(form) {
             if (confirm("Are you sure you want to delete this package?")) {
@@ -32,7 +31,7 @@
         <div class="back">
             <button id="backButton">Back</button>
         </div>
-        <!-- table content -->
+       
     </div>
 
     <script>
@@ -57,7 +56,7 @@
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                echo "<td>" . $row["id"] . "</td>";
+                echo "<td>" . $row["package_id"] . "</td>";
                 echo "<td>" . $row["package_name"] . "</td>";
                 echo "<td>" . $row["description"] . "</td>";
                 echo "<td>" . '$' . $row["price"] . "</td>";
@@ -65,12 +64,12 @@
                 echo "<td>" . $row["image_path"] . "</td>";
                     echo "<td>
                  <form method='post' action='delete_package.php' style='display:inline;' onsubmit='event.preventDefault(); confirmDelete(this);'>
-                  <input type='hidden' name='id' value='" . $row["id"] . "'>
+                  <input type='hidden' name='id' value='" . $row["package_id"] . "'>
                   <input type='submit' value='Delete'>
               </form>
               </td>";
             echo "<td> <form method='post' action='updatepackages.php' style='display:inline;'>
-                        <input type='hidden' name='id' value='" . $row["id"] . "'>
+                        <input type='hidden' name='id' value='" . $row["package_id"] . "'>
                         <input type='submit' value='Update'>
                     </form></td>";
     

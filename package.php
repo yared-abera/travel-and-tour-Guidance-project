@@ -7,7 +7,6 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="css/package.css">
   <link rel="stylesheet"  type="text/css" href="css/header.css">
-  
 </head>
 <body>
 
@@ -16,21 +15,22 @@
  include("login.php");
  include("register.php");
 require_once "dbconnect.php";
+
 // Fetch package details from the database
 $sql = "SELECT * FROM packages";
 $result = $conn->query($sql);
 
 // Check if packages are available
 if ($result->num_rows > 0) {
-   
     echo '<div class="heading" style="background:url(images/package-bg.jpg) no-repeat">
             <h1>packages</h1>
           </div>';
     echo '<section class="packages">
             <h1 class="heading-title">top destinations</h1>
             <div class="box-container">';
-    
+
     while ($row = $result->fetch_assoc()) {
+        $packageId = $row["package_id"]; // Get the package ID
         $packageName = $row["package_name"];
         $description = $row["description"];
         $price = $row["price"];
@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
                   <h3>' . $packageName . '</h3>
                   <p>' . $description . '</p>
                   <h2>$' . $price . '</h2>
-                  <a href="book.php" class="btn">book now</a>
+                  <a href="book.php?package_id=' . $packageId . '" class="btn">book now</a>
                 </div>
               </div>';
     }
