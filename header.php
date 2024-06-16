@@ -18,15 +18,19 @@
 <a href="home.php" class="logo"><img src="images/travel agency.jfif"></a>
 
 <nav class="navbar">
+    <div class="userheader">
+    <h6><a href="index.php">admin</a> </h6>
+    <a id="loginBtn" href="#" style="font-size:12px">login/</a>
+    <a id="signupBtn" href="#">signup</a>
+</div>
+<div class="mainheader-list">
    <a href="home.php">home</a>
    <a href="about.php">about</a>
    <a href="package.php" class="active">package</a>
-   <a href="book.php">book</a>
-   <a href="adminlogin.php" style="font-size:26px">admin</a> 
-   <a id="loginBtn" href="#">login</a>
-   <a id="signupBtn" href="#">signup</a>
+   <!-- <a href="book.php">book</a> -->
+   
+   </div>
 </nav>
-
 <div id="menu-btn" class="fas fa-bars"></div>
  
 </section>

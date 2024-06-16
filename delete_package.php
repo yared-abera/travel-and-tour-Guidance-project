@@ -2,7 +2,7 @@
 require"dbconnect.php";
 $id = $_POST['id'];
 
-$sql = "DELETE FROM packages WHERE id='$id'";
+$sql = "DELETE FROM packages WHERE package_id='$id'";
 if ($conn->query($sql) === TRUE) {
     echo "Record deleted successfully";
 } else {

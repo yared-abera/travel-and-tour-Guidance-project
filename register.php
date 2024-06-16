@@ -8,7 +8,8 @@ if(isset($_POST['submit'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $pass = mysqli_real_escape_string($conn, $_POST['password']);
     $cpass = mysqli_real_escape_string($conn, $_POST['cpassword']);
-    $check_email = mysqli_query($conn, "SELECT * FROM  users WHERE email = '$email'");
+    $sql= "SELECT * FROM  users WHERE email = '$email'";
+    $check_email = mysqli_query($conn,$sql);
     if(mysqli_num_rows($check_email) > 0) {
         $message[] = 'Email already exists!';
     } else {

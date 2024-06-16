@@ -37,7 +37,7 @@ if (isset($_POST['id'])) {
     <input type='text' id='price' name='price' value='" . $row["price"] . "'><br>
 
      <label for='duration'>Duration:</label><br>
-    <input type='text' id='duration' name='duration' value='" . $row["duration"] . "'><br>
+    <input type='date' id='duration' name='duration' value='" . $row["duration"] . "'><br>
     
     <label for='current_image_path'>Current Image Path:</label><br>
     <input type='text' id='current_image_path' name='current_image_path' value='" . $row["image_path"] . "' readonly><br>
@@ -58,4 +58,3 @@ if (isset($_POST['id'])) {
 } else {
     echo "Invalid request. package_id is missing.";
 }
-?>
