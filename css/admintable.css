@@ -1,9 +1,9 @@
-.table-div {
+/* .table-div {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
+} */
 
 .table {
   width: auto;
@@ -20,17 +20,17 @@ th {
   font-size: 28px;
 }
 
-.table-div .back {
+/* .table-div .back {
   display: flex;
   justify-content: flex-end;
   right: 10%;
   background: black;
-  color: white;
+  color: red;
   font-size: 150%;
   border-radius: 10px;
   position: fixed;
   font-family: sans-serif;
-}
+} */
 
 /* style for create package form */
 .createform {
@@ -48,7 +48,9 @@ th {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: wheat;
+  color: var(--light-black);
+  border-radius: 5px;
   width: 80%;
   height: 90%;
 }
@@ -56,7 +58,8 @@ th {
 .createform form input {
   width: 50%;
   height: 20%;
-  border: black 2px solid;
+
+  /* border: black 2px solid; */
   margin-bottom: 10px;
 }
 
@@ -72,6 +75,7 @@ th {
   font-size: 28px;
   font-family: sans-serif;
   font-weight: 200;
+  color: red;
 }
 
 .createform form .submit:hover {
@@ -84,4 +88,55 @@ th {
   font-family: sans-serif;
   font-weight: 150;
   font-style: italic;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.back {
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15%;
+}
+
+#backButton {
+  background-color: #4caf50;
+  color: white;
+  font-size: 100%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* #backButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+
+#backButton:hover {
+  background-color: #45a049;
+}
+
+.back-button-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
 }
