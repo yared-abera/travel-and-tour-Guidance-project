@@ -18,7 +18,7 @@
                 <input type="text" id="username" name="username" required><br><br>
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required><br><br>
-                <button type="submit">Login</button>
+                <button type="submit"><a href="userhome.php">Login</a></button>
                 <p>Don't have an account? <a href="register.php">Register</a></p>
             </form>
         </div>

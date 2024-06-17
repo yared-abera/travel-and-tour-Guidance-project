@@ -8,6 +8,14 @@
 
 </head>
 <body>
+<?php
+session_start();
+
+// Check if the user has a valid session
+if (isset($_SESSION['username'])) {
+    // User has a valid session, allow access to the admin home page
+?>
+
 	<?php
 	include("header.php");
 	?>
@@ -19,6 +27,13 @@
          <div> <a id="manageUsersBtn" class="adminnav"  href="manageUsers.php">Manage Users</a></div>  
 
         </div>
+		<?php
+} else {
+    // User does not have a valid session, redirect to the login page
+    header("Location: index.php");
+    exit;
+}
+?>
 	<script src="js/script.js"></script>
 	</body>
 	</html>

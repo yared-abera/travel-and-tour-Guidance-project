@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    
     <section class="header">
         <div class="home">
             <div class="div">
@@ -16,11 +17,13 @@
                 <a href="">Change Password</a>
                 <a href="">History</a>
             </div>
-            <a href="">Logout</a>
+            <a href="home.php">Logout</a>
 
         </div>
     </section>
-
+    <?php
+    include("package.php");
+    ?>
 </body>
 
 </html>

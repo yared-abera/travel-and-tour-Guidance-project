@@ -27,17 +27,17 @@ if (isset($_POST['id'])) {
 
 <form method='post' action='process update.php' enctype='multipart/form-data' class='createform'>
     <input type='hidden' name='id' value='" . $row["package_id"] . "'>
-    <label for='package_name'>Package Name:</label><br>
-    <input type='text' id='package_name' name='package_name' value='" . $row["package_name"] . "'><br>
+    <label for='package_name'>Package Name:</label> <br>
+    <input type='text' id='package_name' name = 'package_name' value='" . $row["package_name"] . "'><br>
     
-    <label for='description'>description:</label><br>
-    <input type='text' id='description' name='description' value='" . $row["description"] . "'><br>
+    <label for='description'>description:</label> <br>
+    <input type='text' id='description' name='description' value = '" . $row["description"] . "'><br>
     
     <label for='price'>Price:</label><br>
     <input type='text' id='price' name='price' value='" . $row["price"] . "'><br>
 
-     <label for='duration'>Duration:</label><br>
-    <input type='date' id='duration' name='duration' value='" . $row["duration"] . "'><br>
+     <label for='duration'>Duration:</label> <br>
+    <input type='date' id='duration' name = 'duration' value='" . $row["duration"] . "'><br>
     
     <label for='current_image_path'>Current Image Path:</label><br>
     <input type='text' id='current_image_path' name='current_image_path' value='" . $row["image_path"] . "' readonly><br>
