@@ -11,7 +11,7 @@
 <body>
 
 <?php
- include("header.php");
+//  include("header.php");
  include("login.php");
  include("register.php");
 require_once "dbconnect.php";

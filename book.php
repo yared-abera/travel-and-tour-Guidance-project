@@ -8,7 +8,7 @@ if (isset($_GET['package_id'])) {
     $package_id = mysqli_real_escape_string($conn, $_GET['package_id']);
 } else {
     // Redirect the user to the package list page or display an error message
-    header('location:packages.php');
+    header('location:book.php');
     exit;
 }
 

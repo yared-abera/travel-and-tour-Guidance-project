@@ -28,18 +28,25 @@ if (isset($_POST['send'])) {
         $stmt->bind_param("sssssss", $name, $contact_detail, $location, $guests, $arrivals, $leaving, $package_id);
 
         if ($stmt->execute()) {
-            session_start();
-            $_SESSION['success_message'] = "Booking successful.";
-            header('location:book.php');
+            // Display a success message using JavaScript
+            echo '<script>
+                  alert("Booking successful.");
+                  window.location.href = "book.php";
+                  </script>';
         } else {
             $error = $stmt->error;
-            echo "Something went wrong: $error";
+            // Display an error message using JavaScript
+            echo '<script>
+                  alert("Something went wrong: ' . $error . '");
+                  window.location.href = "book.php";
+                  </script>';
         }
     } else {
-        // Redirect the user back to the booking form with an error message
-        session_start();
-        $_SESSION['error_message'] = "Invalid package selected. Please try again.";
-        header('location:book.php');
+        // Display an error message using JavaScript
+        echo '<script>
+              alert("Invalid package selected. Please try again.");
+              window.location.href = "package.php";
+              </script>';
     }
 
     $stmt->close();
@@ -48,4 +55,3 @@ if (isset($_POST['send'])) {
 }
 
 $conn->close();
-?>

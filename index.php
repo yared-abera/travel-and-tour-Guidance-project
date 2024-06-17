@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $username = "";
 $password = "";
 $err = "";
@@ -11,14 +13,18 @@ if (isset($_POST['login'])) {
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) == 1) {
-        // Login successful, redirect to adminhome.php
+        // Login successful, store the username in the session
+        $_SESSION['username'] = $username;
+         echo'correct';
+        // Redirect the user to the admin home page
         header("Location: adminhome.php");
-        exit;
+        
     } else {
         $err = "Username or password error";
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
