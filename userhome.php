@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    
+
     <section class="header">
         <div class="home">
             <div class="div">
-                <a href="">Profile</a>
+                <a href="userprofile.php">Profile</a>
                 <a href="">Change Password</a>
                 <a href="">History</a>
             </div>
@@ -22,7 +22,7 @@
         </div>
     </section>
     <?php
-    include("package.php");
+    include ("package.php");
     ?>
 </body>
 
