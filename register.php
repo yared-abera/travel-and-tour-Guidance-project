@@ -23,10 +23,10 @@ if(isset($_POST['submit'])) {
                 $message[] = 'Password must be at least 6 characters!';
             } else {
                 $hashed_pass = md5($pass);
-                mysqli_query($conn, "INSERT INTO users (names, username, email, passwords) VALUES ('$name', '$username', '$email', '$hashed_pass')") or die('Query failed: ' . mysqli_error($conn));
+                mysqli_query($conn, "INSERT INTO users (name, username, email, password) VALUES ('$name', '$username', '$email', '$hashed_pass')") or die('Query failed: ' . mysqli_error($conn));
                 $message[] = 'Registered successfully!';
-                // header('Location: login.php');
-                // exit(); // Ensure no further code is executed after the redirect
+                 header('Location: login.php');
+                exit(); // Ensure no further code is executed after the redirect
             }
         }
     }

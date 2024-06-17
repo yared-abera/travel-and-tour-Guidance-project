@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>manage users</title>
     <link rel="stylesheet" href="css/admintable.css">
 </head>
 
@@ -35,9 +35,14 @@ $result = $conn->query($sql);
     </script>
 
 <!-- Display users in a table -->
-<table>
+ <div>
+<table border="4" class="table" border-collapse="collapse">
     <tr>
+        <th>user_id</th>
+        <th>name</th>
         <th>Username</th>
+        <th>email</th>
+        <th>password</th>
         <!-- Add other user fields as required -->
     </tr>
     <?php
@@ -45,12 +50,18 @@ $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
+            echo "<td>" . $row["user_id"] . "</td>";
+            echo "<td>" . $row["name"] . "</td>";
             echo "<td>" . $row["username"] . "</td>";
+            echo "<td>" . $row["email"] . "</td>";
+            echo "<td>" . $row["password"] . "</td>";
+            
             // Display other user fields here
             echo "</tr>";
         }
     } else {
-        echo "<tr><td colspan='1'>No users found</td></tr>";
+        echo "<tr><td colspan='5'>No users found</td></tr>";
     }
     ?>
 </table>
+</div>

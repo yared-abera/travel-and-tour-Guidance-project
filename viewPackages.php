@@ -31,7 +31,7 @@
         <div class="back">
             <button id="backButton">Back</button>
         </div>
-        <!-- table content -->
+       
     </div>
 
     <script>
