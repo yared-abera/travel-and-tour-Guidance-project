@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
              
             // Verify the password
             if (password_verify($password, $user['password'])) {
-                $_SESSION['username']= $username;
+                $_SESSION['username']= $_POST['username'];
                 header("Location: userhome.php"); // Redirect to a dashboard or home page
                 exit();
             } else {
