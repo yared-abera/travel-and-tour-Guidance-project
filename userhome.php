@@ -21,12 +21,12 @@
         </div>
     </section>
     <?php
- 
+  session_start();
+   echo $_SESSION['username'];
 // Include the file
-include("home.php");
-
- 
-
+include("header.php");
+include("mainhome.php");
+    
     ?>
 </body>
 
