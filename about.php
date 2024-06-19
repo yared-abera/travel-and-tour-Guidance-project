@@ -4,7 +4,7 @@ if (session_status() == PHP_SESSION_NONE) {
  
 // Check if the user is logged in
 if (isset($_SESSION['username'])) { 
-   include("userhome_header");
+   include("userhome_header.php");
 }
   
    include("above_header.php"); 
