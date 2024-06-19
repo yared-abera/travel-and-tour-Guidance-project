@@ -70,7 +70,7 @@ textarea {
   background-color: #45a049;
 }
 
-.back-button {
+.back-button,.back {
   display: block;
   margin-top: 20px;
   padding: 10px 20px;

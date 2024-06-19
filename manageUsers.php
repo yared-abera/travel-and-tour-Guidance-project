@@ -18,7 +18,7 @@
     ?>
     <div class="table-div">
 
-        <div class="back-button">
+        <div class="back">
             <button id="backButton">Back</button>
         </div>
         <!-- table content -->
