@@ -14,7 +14,7 @@ if (isset($_POST['login'])) {
 
     if (mysqli_num_rows($result) == 1) {
         // Login successful, store the username in the session
-        $_SESSION['username'] = $username;
+        $_SESSION['username_admin'] = $username;
          echo'correct';
         // Redirect the user to the admin home page
         header("Location: adminhome.php");
