@@ -13,7 +13,7 @@
         <div class="home">
             <div class="div">
                 <a href="userprofile.php">Profile</a>
-                <a href="">Change Password</a>
+                <a href="change_password.php">Change Password</a>
                 <a href="user-booking-his.php">History</a>
             </div>
             <a href="logout.php">Logout</a>
@@ -21,12 +21,12 @@
         </div>
     </section>
     <?php
-  session_start();
-   echo $_SESSION['username'];
-// Include the file
-include("header.php");
-include("mainhome.php");
-    
+    session_start();
+    echo $_SESSION['username'];
+    // Include the file
+    include ("header.php");
+    include ("mainhome.php");
+
     ?>
 </body>
 

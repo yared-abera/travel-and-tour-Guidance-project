@@ -7,19 +7,20 @@
     <title>user home</title>
     <link rel="stylesheet" href="css/userhome.css">
 </head>
+
 <body>
     <section class="header">
         <div class="home">
             <div class="div">
                 <a href="userprofile.php">Profile</a>
-                <a href="">Change Password</a>
+                <a href="change_password.php">Change Password</a>
                 <a href="user-booking-his.php">History</a>
             </div>
             <a href="logout.php">Logout</a>
 
         </div>
     </section>
-    
+
 </body>
 
 </html>
