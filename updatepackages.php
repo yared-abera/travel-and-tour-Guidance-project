@@ -21,7 +21,7 @@ if (isset($_POST['id'])) {
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Update package</title>
-    <link rel='stylesheet' href='admintable.css'>
+    <link rel='stylesheet' href='css/updatepackage.css'>
 </head>
 <body>
 

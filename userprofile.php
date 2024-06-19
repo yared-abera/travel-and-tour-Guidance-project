@@ -50,6 +50,7 @@
             <div><input type="email" id="email" name="email" value="<?php echo $row['email']; ?>" required></div>
       
             <input type="submit" value="Update Profile">
+            <a href="userhome.php" class="back-button">Back</a> 
   </form>
   </div>
     <?php

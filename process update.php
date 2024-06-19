@@ -61,7 +61,7 @@ if ($con) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Status</title>
-    <link rel="stylesheet" href="update.css"> 
+    <link rel="stylesheet" href="css/processupdate.css"> 
 </head>
 <body>
     <div class="container">

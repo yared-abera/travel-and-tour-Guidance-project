@@ -31,7 +31,7 @@ if (isset($_POST['login'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/adminlog.css">
 </head>
 <body>
     <div class="box">
@@ -44,7 +44,7 @@ if (isset($_POST['login'])) {
             <input type="password" name="password" placeholder="Enter password" required>
             <section class="lsbutton">
                 <input type="submit" value="Login" name="login" required id="input">
-                <button><a href="sign up.php" style="color:#ffc107">/Sign Up</a></button>
+               
                 <input type="reset" name="reset" id="input">
             </section>
         </form>
