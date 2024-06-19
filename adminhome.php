@@ -12,7 +12,7 @@
 session_start();
 
 // Check if the user has a valid session
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['username_admin'])) {
     // User has a valid session, allow access to the admin home page
 ?>
 
@@ -30,7 +30,7 @@ if (isset($_SESSION['username'])) {
 		<?php
 } else {
     // User does not have a valid session, redirect to the login page
-    header("Location: adminhome.php");
+    header("Location: home.php");
     exit;
 }
 ?>
