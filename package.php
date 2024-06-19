@@ -1,3 +1,21 @@
+<?php 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+ 
+// Check if the user is logged in
+if (isset($_SESSION['username'])) { 
+  header("Location: userhome.php");
+}
+  
+   include("above_header.php"); 
+   include("header.php");
+
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +29,8 @@
 <body>
 
 <?php
- include("header.php");
 require_once "dbconnect.php";
+
 // Fetch package details from the database
 $sql = "SELECT * FROM packages";
 $result = $conn->query($sql);

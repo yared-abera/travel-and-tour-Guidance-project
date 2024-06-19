@@ -4,7 +4,7 @@ if (session_status() == PHP_SESSION_NONE) {
  
 // Check if the user is logged in
 if (isset($_SESSION['username'])) { 
-    header("Location: userhome.php");
+   header("Location: userhome.php");
 }
   
    include("above_header.php"); 
@@ -39,9 +39,7 @@ if (isset($_SESSION['username'])) {
    </script>
 </head>
 <body>
-   <?php
-   include("header.php");
-   ?>
+
    <div class="heading" style="background:url(images/souf-omer.jpg)  no-repeat">
       <h1>ABOUT US</h1>       
 </div>
