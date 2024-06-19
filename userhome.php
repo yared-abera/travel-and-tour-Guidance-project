@@ -22,7 +22,7 @@
     </section>
     <?php
     session_start();
-    echo $_SESSION['username'];
+    echo "<div class='welcome'>" ."Welcome " ."<span> ". htmlspecialchars($_SESSION['username'])."</span>". " to our page" . "</div>";
     // Include the file
     include ("header.php");
     include ("package.php");

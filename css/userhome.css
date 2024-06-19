@@ -24,3 +24,18 @@
 .div a {
   color: black;
 }
+
+
+.welcome{
+  text-align: center;
+  font-size: 30px;
+  margin: auto;
+  color: rgb(236, 12, 12);
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.welcome span{
+  color: rgb(15, 255, 7);
+}

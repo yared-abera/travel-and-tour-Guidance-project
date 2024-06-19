@@ -173,9 +173,9 @@ if ($result->num_rows > 0) {
         <div class="section1">
 
         <label for="name">Username:</label>
-        <input type="text" id="name" name="name" value="<?php echo $row['username']; ?>" required>
+        <input type="text" id="name" name="name" value="<?php echo $row['username']; ?>" required readonly>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="<?php echo $row['email']; ?>" required>
+        <input type="email" id="email" name="email" value="<?php echo $row['email']; ?>" required readonly>
 
         <label for="phone">Phone:</label>
         <input type="tel" id="phone" name="phone" required>
