@@ -5,16 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>admin home</title>
 	<link rel="stylesheet" href="css/adminhome.css">
+ 	<link rel="stylesheet" href="css/userhome.css">
 
 </head>
 <body>
 <?php
 session_start();
-
-// Check if the user has a valid session
+// Check if the admin has a valid session
 if (isset($_SESSION['username_admin'])) {
-    // User has a valid session, allow access to the admin home page
-?>
+ ?>
 
 	<?php
 	include("header.php");

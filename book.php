@@ -166,15 +166,14 @@ if ($result->num_rows > 0) {
 
         <label for="address">Address:</label>
         <textarea id="address" name="address" required></textarea>
-
-        <label for="location">Location:</label>
-        <input type="text" id="location" name="location" required>
         </div>
 
         <div class="section2">
         <label for="guests">Number of Guests:</label>
         <input type="number" id="guests" name="guests" min="1" required>
-
+         
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
         <label for="arrivals">Arrival Date:</label>
         <input type="date" id="arrivals" name="arrivals" required>
 

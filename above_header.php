@@ -8,8 +8,6 @@
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/package.css"> 
     <link rel="stylesheet" type="text/css" href="css/register.css">
-
-
     <script src="js/login.js"></script>
     <script src="js/register.js"></script>
 
@@ -31,5 +29,6 @@
 </div>
  </nav>
  </section>
+ <!-- <script src="js/script.js"></script> -->
 </body>
 </html>

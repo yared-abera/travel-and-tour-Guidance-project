@@ -25,7 +25,7 @@
     echo $_SESSION['username'];
     // Include the file
     include ("header.php");
-    include ("mainhome.php");
+    include ("package.php");
 
     ?>
 </body>
