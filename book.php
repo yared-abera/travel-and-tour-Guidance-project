@@ -81,7 +81,7 @@ if ($result->num_rows > 0) {
             width: 50%;
             background-color: #fff;
             padding: 30px;
-            background-color: tomato;
+            
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
            justify-content: center;
@@ -133,6 +133,22 @@ if ($result->num_rows > 0) {
             background-color: #f8d7da;
             color: #721c24;
         }
+        .back-button {
+    display: block;
+    width: 15%;
+    padding: 10px;
+    background-color: #f44336;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    /* Added margin-top */
+}
+
+.back-button:hover {
+    background-color: #c62828;
+}
     </style>
 </head>
 <body>
@@ -183,6 +199,7 @@ if ($result->num_rows > 0) {
         </div>
         </div>
         <button type="submit" name="send">Book Now</button>
+        <a href="userhome.php" class="back-button">Back</a>
     </form>
     </section>
 </body>
