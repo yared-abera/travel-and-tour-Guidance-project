@@ -12,8 +12,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error cancelling the booking: " . mysqli_error($conn);
     }
 }
-
+ 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+ 
+// Check if the user is logged in
+if (isset($_SESSION['username'])) { 
+    header("Location: userhome.php");
+}}
+else{
 // Redirect back to the view bookings page
 header("Location: viewBookings.php");
+}
 exit();
 ?>

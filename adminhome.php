@@ -30,7 +30,7 @@ if (isset($_SESSION['username'])) {
 		<?php
 } else {
     // User does not have a valid session, redirect to the login page
-    header("Location: index.php");
+    header("Location: adminhome.php");
     exit;
 }
 ?>
