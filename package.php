@@ -22,9 +22,10 @@ if (isset($_SESSION['username'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
   <link rel="stylesheet" type="text/css" href="css/package.css">
   <link rel="stylesheet"  type="text/css" href="css/header.css">
+  <script src="js/script.js"></script>
 </head>
 <body>
 

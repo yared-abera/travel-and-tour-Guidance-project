@@ -46,7 +46,7 @@ $result = $conn->query($sql);
         <!-- Add other user fields as required -->
     </tr>
     <?php
-    include("adminhome.php");
+  //  include("adminhome.php");
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
