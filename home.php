@@ -1,3 +1,23 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+ 
+// Check if the user is logged in
+if (isset($_SESSION['username'])) { 
+    header("Location: userhome.php");
+}else{
+   include("above_header.php"); 
+   include("header.php");
+   }
+
+}
+ 
+
+
+// Check if login prompt should be displayed
+$showLoginPrompt = isset($_GET['loginPrompt']) && $_GET['loginPrompt'] === 'true';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,14 +44,16 @@
                return false;
         });
        });
+
+       
+    // JavaScript to show an alert if login prompt is required
+    <?php if ($showLoginPrompt): ?>
+        alert("Please log in to access this page.");
+    <?php endif; ?>
    </script>
 </head>
 <body>
-   <?php
-   include("header.php");
-   include("login.php");
-   include("register.php");
-   ?>
+   
   <!-- hhome section starts -->
 <section class="home">
   

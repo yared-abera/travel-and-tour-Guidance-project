@@ -5,45 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="userhome.css">
+    <link rel="stylesheet" href="css/userprofile.css">
 </head>
 
 <body>
-
-
-
-    <?php
+ <?php
     session_start();
     require_once "dbconnect.php";
-
-
-    // Establish the database connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check the connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Fetch the user data
-    $user_id = $_SESSION['user_id'];
-    $stmt = $conn->prepare("SELECT name, username, email FROM users WHERE user_id = ?");
-    $stmt->bind_param("i", $user_id);
+  // Fetch the user data
+    $user_name = $_SESSION['username'];
+    $stmt = $conn->prepare("SELECT name, username, email,user_id FROM users WHERE username = ?");
+    $stmt->bind_param("i", $user_name);
     $stmt->execute();
     $result = $stmt->get_result();
-    $row = $result->fetch_assoc();
-
+    $row = $result->fetch_assoc(); 
     // Handle form submission
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $name = $_POST['name'];
         $username = $_POST['username'];
         $email = $_POST['email'];
-
+        $user_id=$row['user_id'];
         // Update the user's profile in the database
-        $updateStmt = $conn->prepare("UPDATE users SET name = ?, username = ?, email = ? WHERE user_id = ?");
-        $updateStmt->bind_param("sssi", $name, $username, $email, $user_id);
+    
+        $updateStmt = $conn->prepare("UPDATE users SET name = ?, username = ?, email = ? WHERE username=?");
+        $updateStmt->bind_param("sssi", $name, $username, $email,$user_id);
         if ($updateStmt->execute()) {
-            echo "Profile updated successfully!";
+           echo "Profile updated successfully!";
         } else {
             echo "Error updating profile: " . $conn->error;
         }
@@ -51,20 +38,20 @@
     }
     ?>
     
-
-        <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+  <div class="profile-container">
+    <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+            
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" value="<?php echo $row['name']; ?>" required><br>
-
+            <div><input type="text" id="name" name="name" value="<?php echo $row['name']; ?>" required></div>
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" value="<?php echo $row['username']; ?>" required><br>
-
+            <div><input type="text" id="username" name="username" value="<?php echo $row['username']; ?>" required></div>
+          
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" value="<?php echo $row['email']; ?>" required><br>
-
+            <div><input type="email" id="email" name="email" value="<?php echo $row['email']; ?>" required></div>
+      
             <input type="submit" value="Update Profile">
-        </form>
-  
+  </form>
+  </div>
     <?php
     // Close the database connection
     $stmt->close();

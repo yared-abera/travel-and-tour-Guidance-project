@@ -20,7 +20,7 @@ if ($con) {
                             price='$price', 
                             duration='$duration',
                             image_path='$image_path' 
-                        WHERE id='$id'";
+                        WHERE package_id='$id'";
 
                 if ($conn->query($sql) === TRUE) {
                     $message = "Record updated successfully";
@@ -37,7 +37,7 @@ if ($con) {
                             price='$price', 
                             duration='$duration',
                             image_path='$current_image_path' 
-                        WHERE id='$id'";
+                        WHERE package_id='$id'";
 
             if ($conn->query($sql) === TRUE) {
                 $message = "Record updated successfully";

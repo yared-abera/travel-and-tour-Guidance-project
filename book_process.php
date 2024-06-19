@@ -1,7 +1,7 @@
 <?php
 require("dbconnect.php");
 
-if (isset($_POST['send'])) {
+   if (isset($_POST['send'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
@@ -29,9 +29,9 @@ if (isset($_POST['send'])) {
 
         if ($stmt->execute()) {
             // Display a success message using JavaScript
-            echo '<script>
+         echo '<script>
                   alert("Booking successful.");
-                  window.location.href = "book.php";
+                  window.location.href = "userhome.php";
                   </script>';
         } else {
             $error = $stmt->error;

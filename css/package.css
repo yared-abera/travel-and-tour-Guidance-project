@@ -80,7 +80,7 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 500;
   background-color: var(--white);
   display: flex;
   padding-top: 2rem;
@@ -89,6 +89,7 @@ section {
   align-items: center;
   gap: 20.3%;
   justify-content: center;
+  
 }
 
 .header .logo {

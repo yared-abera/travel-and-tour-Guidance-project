@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var closeBtn = document.getElementById("closeBtn-register");
 
     signupBtn.addEventListener("click", function () {
-        modal.style.display = "flex";
+        modal.style.display = "block";
+        // modal.style.flexDirection = "column";
     });
 
     closeBtn.addEventListener("click", function () {

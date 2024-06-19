@@ -2,6 +2,18 @@
 // Start the session
 session_start();
 require("dbconnect.php");
+// Check if the user is logged in
+if (!isset($_SESSION['username'])) {
+    // Redirect the user to the login page
+    
+    header("Location: home.php?loginPrompt=true");
+    
+    exit;
+}
+
+
+
+
 
 // Check if the package_id is set in the URL
 if (isset($_GET['package_id'])) {
@@ -18,6 +30,15 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $package_id);
 $stmt->execute();
 $result = $stmt->get_result();
+
+// Retrieve the user details from the database
+$user_name = $_SESSION['username'];
+$user_sql = "SELECT * FROM users WHERE username = ?";
+$user_stmt = $conn->prepare($user_sql);
+$user_stmt->bind_param("s", $user_name);
+$user_stmt->execute();
+$user_result = $user_stmt->get_result();
+$row = $user_result->fetch_assoc();
 
 if ($result->num_rows > 0) {
     $package = $result->fetch_assoc();
@@ -134,8 +155,11 @@ if ($result->num_rows > 0) {
        
         <div class="form">
         <div class="section1">
+
+        <label for="name">Username:</label>
+        <input type="text" id="name" name="name" value="<?php echo $row['username']; ?>" required>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" value="<?php echo $row['email']; ?>" required>
 
         <label for="phone">Phone:</label>
         <input type="tel" id="phone" name="phone" required>
@@ -156,8 +180,7 @@ if ($result->num_rows > 0) {
 
         <label for="leaving">Departure Date:</label>
         <input type="date" id="leaving" name="leaving" required>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        
         </div>
         </div>
         <button type="submit" name="send">Book Now</button>

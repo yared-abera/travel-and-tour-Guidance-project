@@ -11,9 +11,7 @@
 <body>
 
 <?php
-//  include("header.php");
- include("login.php");
- include("register.php");
+ include("header.php");
 require_once "dbconnect.php";
 
 // Fetch package details from the database
@@ -36,7 +34,7 @@ if ($result->num_rows > 0) {
         $price = $row["price"];
         $imagePath = $row["image_path"];
 
-        echo '<div class="box">
+       echo '<div class="box">
                 <div class="image">
                   <img src="' . $imagePath . '" alt="">
                 </div>
