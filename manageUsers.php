@@ -42,7 +42,7 @@
                 <th>name</th>
                 <th>Username</th>
                 <th>email</th>
-                <th>password</th>
+                
                 <!-- Add other user fields as required -->
             </tr>
             <?php
@@ -54,7 +54,7 @@
                     echo "<td>" . $row["name"] . "</td>";
                     echo "<td>" . $row["username"] . "</td>";
                     echo "<td>" . $row["email"] . "</td>";
-                    echo "<td>" . $row["password"] . "</td>";
+                    
 
                     // Display other user fields here
                     echo "</tr>";
