@@ -13,6 +13,12 @@
 session_start();
 // Check if the admin has a valid session
 if (isset($_SESSION['username_admin'])) {
+	if(isset($_SESSION["admin-home"])){
+		header("location:home.php");
+	}
+	else{
+		$_SESSION["admin-home"]=true;
+	}
  ?>
 
 	<?php
@@ -24,6 +30,7 @@ if (isset($_SESSION['username_admin'])) {
            <div> <a id="viewPackagesBtn" class="adminnav"  href="viewPackages.php">View Packages</a></div>
            <div><a id="viewBookingsBtn" class="adminnav"  href="viewBookings.php">View Bookings</a></div> 
          <div> <a id="manageUsersBtn" class="adminnav"  href="manageUsers.php">View Users</a></div>  
+		 <div> <a id="manageUsersBtn" class="adminnav"  href="logout-admin.php">logout</a></div>  
 
         </div>
 		<?php

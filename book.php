@@ -11,10 +11,6 @@ if (!isset($_SESSION['username'])) {
     exit;
 }
 
-
-
-
-
 // Check if the package_id is set in the URL
 if (isset($_GET['package_id'])) {
     $package_id = mysqli_real_escape_string($conn, $_GET['package_id']);
