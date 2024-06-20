@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['username_admin'])) {
+    // Redirect the user to the login page
+    header("Location: home.php?loginPrompt=true");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

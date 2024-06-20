@@ -1,5 +1,12 @@
 <?php
 session_start();
+if (!isset($_SESSION['username'])) {
+    // Redirect the user to the login page
+
+    header("Location: home.php?loginPrompt=true");
+
+    exit;
+}
 require_once "dbconnect.php";
 
 // Fetch the user data
@@ -9,7 +16,6 @@ $stmt->bind_param("s", $user_name);
 $stmt->execute();
 $result = $stmt->get_result();
 $row = $result->fetch_assoc();
-
 // Handle form submission for password update
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $current_password = $_POST['current_password'];

@@ -4,96 +4,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/admintable.css">
+    <title>List Bookings</title>
+    <link rel="stylesheet" href="css/admintable.css"> <!-- Assuming you have a CSS file for styling -->
 </head>
+
 <body>
     <?php
     session_start();
-    // include("adminhome.php");
+    if (!isset($_SESSION['username'])) {
+        header("Location: home.php?loginPrompt=true");
+        exit;
+    }
+    
     require("dbconnect.php");
     
     $name = $_SESSION['username'];
     
-    $stmt = $conn->prepare("SELECT * FROM bookings WHERE customer_name= ?");
+    $stmt = $conn->prepare("SELECT * FROM bookings WHERE customer_name = ?");
     $stmt->bind_param("s", $name);
     $stmt->execute();
     $result = $stmt->get_result();
-    
     ?>
 
-    
     <div class="table-div">
         <div class="back">
-        <button id="backButton">Back</button>
+            <button id="backButton">Back</button>
         </div>
-      
     </div>
 
-    <?php
-    echo $name;
-    ?>
+    <table border="1" class="table" border-collapse="collapse">
+        <tr>
+            <th>Booking ID</th>
+            <th>Contact Details</th>
+            <th>Selected Package</th>
+            <th>Guests</th>
+            <th>Arrival Date</th>
+            <th>Departure Date</th>
+            <th>Booking Status</th>
+            <th>Action</th>
+        </tr>
+        <?php
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                // Fetch additional details like package name using a separate query
+                $package_id = $row["package_id"];
+                $sql = $conn->prepare("SELECT package_name FROM packages WHERE package_id = ?");
+                $sql->bind_param("s", $package_id);
+                $sql->execute();
+                $p_result = $sql->get_result();
+                $p_row = $p_result->fetch_assoc();
+
+                echo "<tr>";
+                echo "<td>" . htmlspecialchars($row["booking_id"]) . "</td>";
+                echo "<td>" . htmlspecialchars($row["contact_details"]) . "</td>";
+                echo "<td>" . htmlspecialchars($p_row["package_name"])  . "</td>";
+                echo "<td>" . htmlspecialchars($row["guests"]) . "</td>";
+                echo "<td>" . htmlspecialchars($row["arrivals"]) . "</td>";
+                echo "<td>" . htmlspecialchars($row["leaving"]) . "</td>";
+                echo "<td>" . htmlspecialchars($row["booking_status"]) . "</td>";
+                echo "<td>
+                        <form method='post' action='deletebooking-user.php' onsubmit='return confirmDelete();'>
+                            <input type='hidden' name='booking_id' value='" . htmlspecialchars($row["booking_id"]) . "'>
+                            <input type='submit' value='Cancel'>
+                        </form>
+                      </td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "<tr><td colspan='8'>No bookings found</td></tr>";
+        }
+        ?>
+    </table>
 
     <script>
-        // Add an event listener to the back button
-        document.getElementById('backButton').addEventListener('click', navigateToAdminHome);
+        document.getElementById('backButton').addEventListener('click', navigateToUserHome);
 
-        function navigateToAdminHome() {
-            // Redirect to the adminhome.php page
+        function navigateToUserHome() {
             window.location.href = 'userhome.php';
         }
+
+        function confirmDelete() {
+            return confirm("Are you sure you want to cancel this booking?");
+        }
     </script>
-<table border="4" class="table" border-collapse="collapse">
-    <tr>
-        <th>booking_id</th>
-        <th>Contact Details</th>
-        <th>Selected Package</th>
-        <th>guests</th>
-        <th>arrivals</th>
-        <th>leaving</th>
-       <th>Booking Status</th>
-    </tr>
-    <?php
-    // include("adminhome.php");
-    if ($result->num_rows > 0) {
-       
-       
 
-        while ( $row = $result->fetch_assoc()) {
-           
-             $package_id=$row["package_id"];
-         $sql = $conn->prepare("SELECT package_name FROM packages WHERE package_id= ?");
-         $sql->bind_param("s", $package_id);
-         $sql->execute();
-         $p_result = $sql->get_result();
-         $p_row=$p_result->fetch_assoc();
-         
+</body>
 
-      echo "<tr>";
-            echo "<td>" . $row["booking_id"] . "</td>";
-            echo "<td>" . $row["contact_details"] . "</td>";
-            echo "<td>" . $p_row["package_name"]  . "</td>";
-            echo "<td>" . $row["guests"] . "</td>";
-            echo "<td>" . $row["arrivals"] . "</td>";
-            echo "<td>" . $row["leaving"] . "</td>";
-            echo "<td>" . $row["booking_status"] . "</td>";
-            echo "<td>
-    <form method='post' action='cancelbooking.php' style='display:inline;' onsubmit='event.preventDefault(); confirmDelete(this);'>
-        <input type='hidden' name='booking_id' value='" . $row["booking_id"] . "'>
-        <input type='submit' value='Cancel'>
-    </form>
-</td>";
-            echo "</tr>";         
-        }
-    } else {
-        echo "<tr><td colspan='4'>No bookings found</td></tr>";
-    }
-    ?>
-<script>
-    function confirmDelete(form) {
-        if (confirm("Are you sure you want to perform this action?")) {
-            form.submit();
-        }
-    }
-</script>
-</table>
+</html>

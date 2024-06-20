@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!isset($_SESSION['username'])) {
+  // Redirect the user to the login page
+    
+  header("Location: home.php?loginPrompt=true");
+}
 require_once "dbconnect.php";
 
 // Fetch the user data

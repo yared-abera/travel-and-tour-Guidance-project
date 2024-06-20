@@ -7,7 +7,7 @@
     <title>user home</title>
     <link rel="stylesheet" href="css/userhome.css">
 </head>
-
+                     
 <body>
     <section class="header">
         <div class="home">
@@ -22,6 +22,13 @@
     </section>
     <?php
     session_start();
+    if (!isset($_SESSION['username'])) {
+        // Redirect the user to the login page
+    
+        header("Location: home.php?loginPrompt=true");
+
+        exit;
+    }
     echo "<div class='welcome'>" ."Welcome " ."<span> ". htmlspecialchars($_SESSION['username'])."</span>". " to our page" . "</div>";
     // Include the file
     include ("header.php");

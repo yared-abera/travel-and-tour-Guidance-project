@@ -162,7 +162,7 @@ if ($result->num_rows > 0) {
     ?>
     <section class="section">
 
-    <form method="post" action="book_process.php">
+    <form method="post" action="book_process.php"  onsubmit="return validateForm()">
         <input type="hidden" name="package_id" value="<?php echo $package['package_id']; ?>">
        
         <div class="form">
@@ -198,5 +198,35 @@ if ($result->num_rows > 0) {
         <a href="userhome.php" class="back-button">Back</a>
     </form>
     </section>
+
+    <script>
+        function validateForm() {
+            var arrivalDate = document.getElementById("arrivals").value;
+            var departureDate = document.getElementById("leaving").value;
+
+            var currentTime = new Date().toISOString().slice(0, 10);
+
+            // Check if arrival date is in the past
+            if (arrivalDate < currentTime) {
+                alert("Please enter a valid Arrival Date (should be today or in the future).");
+                return false;
+            }
+
+            // Check if departure date is in the past
+            if (departureDate < currentTime) {
+                alert("Please enter a valid Departure Date (should be today or in the future).");
+                return false;
+            }
+
+            // Check if arrival date is after departure date
+            if (arrivalDate > departureDate) {
+                alert("Arrival Date cannot be after Departure Date.");
+                return false;
+            }
+
+            // If all validations pass
+            return true;
+        }
+    </script>
 </body>
 </html>
