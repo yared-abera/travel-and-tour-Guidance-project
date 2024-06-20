@@ -46,20 +46,3 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #45a049;
 }
-
-.back-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #f44336;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 10px;
-    /* Added margin-top */
-}
-
-.back-button:hover {
-    background-color: #c62828;
-}

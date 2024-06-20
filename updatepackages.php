@@ -21,6 +21,7 @@ if (isset($_POST['id'])) {
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Update package</title>
+   
     <link rel='stylesheet' href='css/updatepackage.css'>
 </head>
 <body>
@@ -46,10 +47,13 @@ if (isset($_POST['id'])) {
     <input type='file' id='image' name='image'><br>
     
     <input type='submit' value='Update'>
+    
+    
 </form>
 
 </body>
 </html>";
+
     } else {
         echo "Record not found";
     }

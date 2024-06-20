@@ -27,10 +27,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header("Location: userhome.php"); // Redirect to a dashboard or home page
                 exit();
             } else {
-                echo "Invalid password.";
+                
+                 echo "
+                    <script>
+                        alert('Invalid password.');
+                    </script>
+                   
+                ";
+                 
             }
         } else {
-            echo "No user found with that username.";
+             
+              echo "
+                <script>
+                    alert('No user found with that username.');
+                </script>
+                 
+            ";
+            
         }
     }
 }
