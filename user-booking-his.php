@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List Bookings</title>
+    <title>Booking history</title>
     <link rel="stylesheet" href="css/admintable.css"> <!-- Assuming you have a CSS file for styling -->
 </head>
 
@@ -15,7 +15,14 @@
         header("Location: home.php?loginPrompt=true");
         exit;
     }
-    
+    // Display success or error messages as alerts
+if (isset($_SESSION['success_message'])) {
+    echo '<script>alert("' . $_SESSION['success_message'] . '");</script>';
+    unset($_SESSION['success_message']);
+} elseif (isset($_SESSION['error_message'])) {
+    echo '<script>alert("' . $_SESSION['error_message'] . '");</script>';
+    unset($_SESSION['error_message']);
+}
     require("dbconnect.php");
     
     $name = $_SESSION['username'];

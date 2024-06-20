@@ -150,16 +150,6 @@ if ($result->num_rows > 0) {
 <body>
     <h1>Book Package: <?php echo $package['package_name']; ?></h1>
 
-    <?php
-    // Display any success or error messages
-    if (isset($_SESSION['success_message'])) {
-        echo '<p class="success-message">' . $_SESSION['success_message'] . '</p>';
-        unset($_SESSION['success_message']);
-    } elseif (isset($_SESSION['error_message'])) {
-        echo '<p class="error-message">' . $_SESSION['error_message'] . '</p>';
-        unset($_SESSION['error_message']);
-    }
-    ?>
     <section class="section">
 
     <form method="post" action="book_process.php"  onsubmit="return validateForm()">
