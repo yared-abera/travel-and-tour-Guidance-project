@@ -16,13 +16,7 @@
                 <a href="package.php"> <i class="fas fa-angle-right"></i> package</a>
                 <a href="book.php"> <i class="fas fa-angle-right"></i> book</a>
             </div>
-            <div class="box">
-                <h3>extra links</h3>
-                <a href="#"> <i class="fas fa-angle-right"></i> about us</a>
-                <a href="#"> <i class="fas fa-angle-right"></i> ask questions</a>
-                <a href="#"> <i class="fas fa-angle-right"></i> terms of use</a>
-                <a href="#"> <i class="fas fa-angle-right"></i> privacy policy</a>
-            </div>
+             
             <div class="box">
                 <h3>contact info</h3>
                 <a href="#"> <i class="fas fa-phone"></i> +251911000001 </a>

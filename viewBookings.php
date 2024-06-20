@@ -25,17 +25,6 @@ FROM
 JOIN
     packages p ON b.package_id = p.package_id";
    
-    // $sql = "SELECT * FROM bookings";
-//     $sql="SELECT 
-//     b.customer_name,
-//     b.contact_details,
-//     p.package_name AS selected_package,
-//     b.booking_status
-// FROM 
-//     bookings b
-// JOIN
-//     packages p ON b.package_id = p.package_id";
-
     $result =mysqli_query($conn,$sql);
     ?>
     
