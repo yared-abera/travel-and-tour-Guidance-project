@@ -11,7 +11,7 @@
 <body>
 <?php
 session_start();
-if (!isset($_SESSION['username-admin'])) {
+if (!isset($_SESSION['username_admin'])) {
     // Redirect the user to the login page
     header("Location: home.php?loginPrompt=true");
     exit;
